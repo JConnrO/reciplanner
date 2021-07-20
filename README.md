@@ -10,8 +10,8 @@ Back End: Maame, Connor and Steph
 ## To-Do
 0. Meeting Calendar
   - Tues  7/20: 8PM - 10PM
-         FrontEnd:       WireFrame
-         BackEnd:  Get APIs to / See if the return data we want
+        - FrontEnd:       WireFrame
+        - BackEnd:  Get APIs to / See if the return data we want
   - Weds  7/21: 7PM - 9PM 
    
   - Mon   7/26: 7PM - 9PM 
