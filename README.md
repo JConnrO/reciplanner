@@ -25,25 +25,23 @@ Back End: Maame, Connor and Steph
 
 
 ## TO-DO
-1. MVP
-  a. User Storys (Github Issues)
-  b. MVC File  Structure
-   b. API
-      1. Define our data based on the APIs we find.
-      2. Get API's functioning properly
-   d. WireFrame
-   e. Link API with Wireframe
-   f. Cover Requirements Checklist
-2. Powerpoint Presentation
-3. List Additional Features
+### 1. MVP
+  1. User Storys (Github Issues)
+  2. MVC File  Structure
+  3. API
+  4. Wireframe
+  5. Link API with WireFrame
+  6. Cover Requirements Checklist
+### 2. Powerpoint Presentation
+### 3. List Additional Features
    A. Export to food list
    B. Add costs to items of food list
    C. Extra
       1. Meal Counter
       2. Inventory
       3. Calendar
- 
-## Ideas
+
+## Idea
  Food Recipe/Nutrition Sharing Meal Plan 
    MVP: Share recipe information: meal plans, cost, nutrients.
    A. Tags
