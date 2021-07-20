@@ -29,9 +29,11 @@ Back End: Maame, Connor and Steph
   1. User Storys (Github Issues)
   2. MVC File  Structure
   3. API
-  4. Wireframe
-  5. Link API with WireFrame
-  6. Cover Requirements Checklist
+      1. Define our data based on the APIs we find.
+      2. Get API's functioning properly
+  5. Wireframe
+  6. Link API with WireFrame
+  7. Cover Requirements Checklist
 ### 2. Powerpoint Presentation
 ### 3. List Additional Features
    A. Export to food list
