@@ -23,9 +23,11 @@ Back End: Maame, Connor and Steph
   - Sat   7/31:
   - Sun   8/1: PROJECT DUE AT 11:59 PM
 
+
+## TO-DO
 1. MVP
-   a. User Storys (Github Issues)
-   b. MVC File  Structure
+  a. User Storys (Github Issues)
+  b. MVC File  Structure
    b. API
       1. Define our data based on the APIs we find.
       2. Get API's functioning properly
