@@ -1,10 +1,24 @@
 # cautious-carnival
 
-## To-Do
-Front End: David and Stephen
+## Assignments:
 
+For 7/21
+1. WireFrame
+2. Get APIs to / See if the return data we want
+
+Front End: David and Stephen
 Back End: Maame, Connor and Steph
-   API: Steph.
+
+
+
+## To-Do
+0. Meeting Calendar
+1. MVP
+2. 
+3. Github Issues / Features
+
+
+
 
 
 
