@@ -9,6 +9,7 @@ Back End: Maame, Connor and Steph
 
 ## To-Do
 0. Meeting Calendar
+  - Mon   7/19: 7PM - 9PM: 
   - Tues  7/20: 8PM - 10PM: MVP + Project Structure
   - Weds  7/21: 7PM - 9PM: 
    
