@@ -5,10 +5,7 @@
 Front End: David and Stephen
 Back End: Maame, Connor and Steph
 
-
-
-## To-Do
-0. Meeting Calendar
+## Meeting Calendar
   - Mon   7/19: 7PM - 9PM: 
   - Tues  7/20: 8PM - 10PM: 
     - Project Structure -> MVP 
@@ -18,7 +15,7 @@ Back End: Maame, Connor and Steph
   - Sat   7/24:
   - Sun   7/25:
   - Mon   7/26: 7PM - 9PM : 
-    - PRESENTATION
+    - Powerpoint Presentation
   - Tues  7/27: 
   - Weds  7/28: 7PM - 9PM : PRESENTATION DUE
   - Thurs 7/29: 
@@ -35,7 +32,8 @@ Back End: Maame, Connor and Steph
    D. WireFrame
    E. Link API with Wireframe
    F. Cover Requirements Checklist
-2. List Additional Features
+2. Powerpoint Presentation
+3. List Additional Features
    A. Export to food list
    B. Add costs to items of food list
    C. Extra
