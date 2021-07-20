@@ -10,24 +10,41 @@ Back End: Maame, Connor and Steph
 ## To-Do
 0. Meeting Calendar
   - Mon   7/19: 7PM - 9PM: 
-  - Tues  7/20: 8PM - 10PM: MVP + Project Structure
+  - Tues  7/20: 8PM - 10PM: 
+    - Project Structure -> MVP 
   - Weds  7/21: 7PM - 9PM: 
-   
-  - Mon   7/26: 7PM - 9PM 
-  - Weds  7/28: 7PM - 9PM 
+  - Thurs 7/22: 
+  - Fri   7/23: 
+  - Sat   7/24:
+  - Sun   7/25:
+  - Mon   7/26: 7PM - 9PM : 
+    - PRESENTATION
+  - Tues  7/27: 
+  - Weds  7/28: 7PM - 9PM : PRESENTATION DUE
+  - Thurs 7/29: 
+  - Fri   7/30: 
+  - Sat   7/31:
+  - Sun   8/1: PROJECT DUE AT 11:59 PM
+
 1. MVP
-   A. API
-   B. WireFrame
-2. 
-
-
-
-
-
-
+   A. User Storys (Github Issues)
+   B. MVC File  Structure
+   C. API
+      1. Define our data based on the APIs we find.
+      2. Get API's functioning properly
+   D. WireFrame
+   E. Link API with Wireframe
+   F. Cover Requirements Checklist
+2. List Additional Features
+   A. Export to food list
+   B. Add costs to items of food list
+   C. Extra
+      1. Meal Counter
+      2. Inventory
+      3. Calendar
+ 
 ## Ideas
-
-7. Food Recipe/Nutrition Sharing Meal Plan 
+ Food Recipe/Nutrition Sharing Meal Plan 
    MVP: Share recipe information: meal plans, cost, nutrients.
    A. Tags
       1. Gluten Free / 
