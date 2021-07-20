@@ -9,17 +9,15 @@ Back End: Maame, Connor and Steph
 
 ## To-Do
 0. Meeting Calendar
-  - Tues  7/20: 8PM - 10PM
-        - FrontEnd:       WireFrame
-        - BackEnd:  Get APIs to / See if the return data we want
-  - Weds  7/21: 7PM - 9PM 
+  - Tues  7/20: 8PM - 10PM: MVP + Project Structure
+  - Weds  7/21: 7PM - 9PM: 
    
   - Mon   7/26: 7PM - 9PM 
   - Weds  7/28: 7PM - 9PM 
-
-2. MVP
-3. Github Issues / Features
-4. 
+1. MVP
+   A. API
+   B. WireFrame
+2. 
 
 
 
