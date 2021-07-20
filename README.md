@@ -1,5 +1,13 @@
 # cautious-carnival
 
+## To-Do
+Front End: David and Stephen
+
+Back End: Maame, Connor and Steph
+   API: Steph.
+
+
+
 ## Ideas
 
 7. Food Recipe/Nutrition Sharing Meal Plan 
