@@ -24,14 +24,14 @@ Back End: Maame, Connor and Steph
   - Sun   8/1: PROJECT DUE AT 11:59 PM
 
 1. MVP
-   A. User Storys (Github Issues)
-   B. MVC File  Structure
-   C. API
+   a. User Storys (Github Issues)
+   b. MVC File  Structure
+   b. API
       1. Define our data based on the APIs we find.
       2. Get API's functioning properly
-   D. WireFrame
-   E. Link API with Wireframe
-   F. Cover Requirements Checklist
+   d. WireFrame
+   e. Link API with Wireframe
+   f. Cover Requirements Checklist
 2. Powerpoint Presentation
 3. List Additional Features
    A. Export to food list
