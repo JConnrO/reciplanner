@@ -1,0 +1,27 @@
+{
+  "name": "reciplanner",
+  "version": "1.0.0",
+  "description": "## Assignments:",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JConnrO/reciplanner.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JConnrO/reciplanner/issues"
+  },
+  "homepage": "https://github.com/JConnrO/reciplanner#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.2",
+    "sequelize": "^6.6.5"
+  }
+}
