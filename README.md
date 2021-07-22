@@ -6,10 +6,14 @@ Front End: David and Stephen
 Back End: Maame, Connor and Steph
 
 ## Meeting Calendar
-  - Mon   7/19: 7PM - 9PM: 
+  - Mon   7/19: 7PM - 9PM:
+    - Project Idea
   - Tues  7/20: 8PM - 10PM: 
     - Project Structure -> MVP 
-  - Weds  7/21: 7PM - 9PM: 
+  - Weds  7/21: 7PM - 9PM:
+    - Start Coding
+      - Front End: API
+      - Back End: API
   - Thurs 7/22: 
   - Fri   7/23: 
   - Sat   7/24:
