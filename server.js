@@ -6,6 +6,16 @@ const exphbs = require("express-handlebars");
 // Requires the 'express-session' module
 // const session = require(`express-session`);
 
+const sess = {
+  secret: 'Super secret secret',
+  cookie: {},
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize
+  })
+};
+
 const app = express();
 const PORT = process.env.PORT || 3001;
 
