@@ -73,6 +73,27 @@ app.get('/', (req, res) => {
   res.render('index', data);
 });
 
+//LOGIN dummy data SMM
+const food = [
+  {
+    title: 'Love You Forever',
+    read: false,
+    author: 'Robert Munsch'
+  },
+  {
+    title: 'The Giving Tree',
+    read: false,
+    author: 'Shel Silverstein'
+  }
+]
+
+app.get('/login', (req, res) => {
+  const data = {
+    library: food
+  };
+  res.render('login', data);
+});
+
 
 
 
