@@ -9,7 +9,7 @@
    
 } */
   
-html {
+/* html {
     scroll-padding: 150px;
 }
 
@@ -31,8 +31,21 @@ header {
     top: 0;
     z-index: 999;
     border-bottom: 2.5px solid black;
+} */
+
+/* Mobile Responsiveness */
+
+/* Large screens */
+@media screen and (max-width: 1415px){
+ 
 }
 
-header h1 {
-    float: right;
+/* Tablets and smaller*/
+@media screen and (max-width: 768px) {
+    
+}
+
+/* Mobile Responsivness for Galaxy Fold Duo/ iPhone 5 and smaller */
+@media screen and (max-width: 325px) {
+ 
 }
