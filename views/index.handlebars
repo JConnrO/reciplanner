@@ -1,10 +1,11 @@
 {{!-- TESTING DATA TO SEE IF ROUTE WORKS --}}
-<h1>Ben and Jerry's Ice Cream</h1>
-<ol>
-  <li>Milk and Cookies</li>
-  <li>Chocolate Peanut Butter Split</li>
-  <li>Bourbon Pecan Pie</li>
-  <li>Chubby Hubby</li>
-  <li>Coffee Toffee Bar Crunch</li>
-  <li>Ice Cream Sammie</li>
-</ol>
+{{#each library}}
+<ul>
+  <li>
+    <p>Title: {{title}}</p>
+    <p>Author: {{author}}</p>
+    <p>Read: {{read}}</p>
+  </li>
+  
+</ul>
+{{/each}}

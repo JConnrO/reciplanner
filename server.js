@@ -28,6 +28,51 @@ sequelize.sync({ force: false }).then(() => {
 // THE FOLLOWING ROUTES ARE FOR FRONTEND TESTING ONLY
 // Landing Page
 
-app.get('/', (req, res) =>{
-  res.render("index");
-})
+// DATA
+const books = [
+  {
+    title: 'Love You Forever',
+    read: false,
+    author: 'Robert Munsch'
+  },
+  {
+    title: 'The Giving Tree',
+    read: false,
+    author: 'Shel Silverstein'
+  },
+  {
+    title: 'Where the Red Fern Grows',
+    read: true,
+    author: 'Wilson Rawls'
+  },
+  {
+    title: 'The Fault in Our Stars',
+    read: true,
+    author: 'John Green'
+  },
+  {
+    title: 'Out of My Mind',
+    read: false,
+    author: 'Sally Engelfried'
+  },
+  {
+    title: 'Wonder',
+    read: false,
+    author: 'Barbara Schultz'
+  }
+];
+
+// Routes
+// =============================================================
+
+app.get('/', (req, res) => {
+  // Send all of the books to 'index.handlebars' as an object
+  const data = {
+    library: books
+  };
+  res.render('index', data);
+});
+
+
+
+
