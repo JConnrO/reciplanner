@@ -1,10 +1,40 @@
-{{#each library}}
+{{!-- {{#each library}}
 <ul>
   <li>
     <p>Fruit: {{title}}</p>
     <p>Meat: {{author}}</p>
     <p>Bread: {{read}}</p>
   </li>
-  
+
 </ul>
-{{/each}}
+{{/each}} --}}
+
+<form class="login-form">
+  <div>
+    <label for="email-login">email:</label>
+    <input type="text" class="email-login" />
+  </div>
+  <div>
+    <label for="password-login">password:</label>
+     <input type="password" class="password-login" />
+  </div>
+   <div>
+    <button type="submit">login</button>
+  </div>
+</form>
+
+<form class="signup-form">
+  <div>
+    <label for="email-signup">email:</label>
+    <input type="text" class="email-signup" />
+  </div>
+  <div>
+    <label for="password-signup">password:</label>
+    <input type="password" class="password-signup" />
+  </div>
+  <div>
+    <button type="submit">signup</button>
+  </div>
+</form>
+
+<script src="/public/javascript/login.js"></script>
