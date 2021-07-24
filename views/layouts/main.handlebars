@@ -5,12 +5,31 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>ReciPlanner</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="/public/assets/stylesheets/style.css">
 </head>
 
 <body>
-	<h1>THIS IS A PLACE HOLDER TITLE WOW</h1>
-	{{{ body }}}
+	<div class="wrapper">
+		<header>
+			<nav>
+				<h1 class="bg-success text-white">ReciPlanner</h1>
+				{{!-- {{#if loggedIn}} --}}
+				<a href="/dashboard">My Recipes</a>
+				<button id="logout" class="btn-no-style">logout</button>
+				{{!-- {{else}} --}}
+				<a href="/login">login</a>
+				{{!-- {{/if}} --}}
+			</nav>
+		</header>
+		<main>
+			{{{ body }}}
+		</main>
+		<footer>
+			Thanks for visiting!
+		</footer>
+	</div>
 </body>
 
 </html>
