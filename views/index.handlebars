@@ -1,11 +1,11 @@
 {{!-- TESTING DATA TO SEE IF ROUTE WORKS --}}
-{{#each library}}
-<ul>
-  <li>
-    <p>Title: {{title}}</p>
-    <p>Author: {{author}}</p>
-    <p>Read: {{read}}</p>
-  </li>
-  
-</ul>
+{{#each cards}}
+<div class="card" style="width: 18rem;">
+  <iframe src={{ link }} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <div class="card-body">
+    <h5 class="card-title">{{ title }}</h5>
+    <p class="card-text">{{ description}}</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
 {{/each}}

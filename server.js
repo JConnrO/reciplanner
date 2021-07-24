@@ -29,36 +29,27 @@ sequelize.sync({ force: false }).then(() => {
 // Landing Page
 
 // DATA
-const books = [
+const posts = [
   {
-    title: 'Love You Forever',
-    read: false,
-    author: 'Robert Munsch'
+    title: 'Best Chicken Penne',
+    link: 'https://www.youtube.com/embed/Qc2aPjIJk-8',
+    description: 'Super Tasty',
+    upvote: 'Robert Munsch',
+    username: 'ssss'
   },
   {
-    title: 'The Giving Tree',
-    read: false,
-    author: 'Shel Silverstein'
+    title: 'Amazing Chicken Marsala',
+    link: 'https://www.youtube.com/embed/AWNU1OccN5Q',
+    description: 'Much wow',
+    upvote: 'Robert Munsch',
+    username: 'ssss'
   },
   {
-    title: 'Where the Red Fern Grows',
-    read: true,
-    author: 'Wilson Rawls'
-  },
-  {
-    title: 'The Fault in Our Stars',
-    read: true,
-    author: 'John Green'
-  },
-  {
-    title: 'Out of My Mind',
-    read: false,
-    author: 'Sally Engelfried'
-  },
-  {
-    title: 'Wonder',
-    read: false,
-    author: 'Barbara Schultz'
+    title: 'Super simple Sushi',
+    link: "https://www.youtube.com/embed/joweUxpHaqc",
+    description: 'No way!',
+    upvote: 'Robert Munsch',
+    username: 'ssss'
   }
 ];
 
@@ -68,7 +59,7 @@ const books = [
 app.get('/', (req, res) => {
   // Send all of the books to 'index.handlebars' as an object
   const data = {
-    library: books
+    cards: posts
   };
   res.render('index', data);
 });
