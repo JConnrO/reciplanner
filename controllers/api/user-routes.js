@@ -17,19 +17,7 @@ router.get('/:id', (req, res) => {
     User.findOne({
         where: {
             id: req.params.id
-        },
-        include: [
-            {
-                model: Post,
-                attributes: ['id', 'title', 'post_url', 'created_at']
-            },
-            {
-                model: Post,
-                attributes: ['title'],
-                through: Vote,
-                as: 'voted_posts'
-            }
-        ]
+        }
     })
         .then(dbUserData => {
             if (!dbUserData) {
@@ -52,15 +40,11 @@ router.post('/', (req, res) => {
         email: req.body.email,
         password: req.body.password
     })
-        .then(dbUserData => {
-            req.session.save(() => {
-                req.session.user_id = dbUserData.id;
-                req.session.username = dbUserData.username;
-                req.session.loggedIn = true;
-
-                res.json(dbUserData);
-            });
-        })
+        .then(dbUserData => res.json(dbUserData))
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
 })
 
 // PUT /api/users/1
