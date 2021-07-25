@@ -31,7 +31,6 @@ class Recipe extends Model {
     }
   }
 
-
 // create fields/columns for Recipe model
 Recipe.init(
     {
