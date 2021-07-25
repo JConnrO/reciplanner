@@ -23,10 +23,18 @@ Vote.init(
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
-          model: 'post',
+          model: 'recipe',
           key: 'id'
         }
       }
     },
+    {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'vote'
+      }
+    );
 
-    })
+    module.exports = Vote;
