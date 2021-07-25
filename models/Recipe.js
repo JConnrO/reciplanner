@@ -1,27 +1,28 @@
 const sequelize = require('../config/connection');
 
-// create our Post model
+
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-// create our Post model
+// create our Recipe model
 class Recipe extends Model {
   static upvote(body, models) {
     return models.Vote.create({
       user_id: body.user_id,
-      post_id: body.post_id
+      recipe_id: body.recipe_id
     }).then(() => {
       return Post.findOne({
         where: {
-          id: body.post_id
+          id: body.recipe_id
         },
         attributes: [
           'id',
-          'post_url',
+          'youtube_url',
           'title',
+          'description',
           'created_at',
           [
-            sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'),
+            sequelize.literal('(SELECT COUNT(*) FROM vote WHERE recipe.id = vote.recipe_id)'),
             'vote_count'
           ]
         ]
@@ -43,12 +44,16 @@ Recipe.init(
         type: DataTypes.STRING,
         allowNull: false
       },
-      post_url: {
+      youtube_url: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
           isURL: true
         }
+      },
+      description:{
+        type: DataTypes.STRING,
+        allowNull: false
       },
       user_id: {
         type: DataTypes.INTEGER,
@@ -62,7 +67,7 @@ Recipe.init(
       sequelize,
       freezeTableName: true,
       underscored: true,
-      modelName: 'post'
+      modelName: 'recipe'
     }
   );
 
