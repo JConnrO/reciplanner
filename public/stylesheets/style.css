@@ -4,12 +4,17 @@
     box-sizing: border-box;
 }
 
-/* Root color scheme? */
-/* :root {
-   
-} */
+/* Root color scheme?  */
+:root {
+    --primary-color: #e6d3a3;
+    --secondary-color: #d8d174;
+    --tertiary-color: #f2f4f3;
+    --quaternary-color:  #b6c454;
+    --quinary-color: #91972a ;
+    --senary-color: #212121;
+}
   
-/* html {
+html {
     scroll-padding: 150px;
 }
 
@@ -31,7 +36,7 @@ header {
     top: 0;
     z-index: 999;
     border-bottom: 2.5px solid black;
-} */
+}
 
 /* Mobile Responsiveness */
 
