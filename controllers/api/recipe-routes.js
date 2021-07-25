@@ -28,5 +28,37 @@ router.get('/', (req, res) => {
         console.log(err);
         res.status(500).json(err);
       });
-  
+  });
+
+  router.get('/:id', (req, res) => {
+    Post.findOne({
+      where: {
+        id: req.params.id
+      },
+      attributes: [
+      'id', 
+      'youtube_url', 
+      'title', 
+      'description',
+      'created_at'
+      [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE recipe.id = vote.recipe_id)'), 'vote_count']
+    ],
+      include: [
+        {
+          model: User,
+          attributes: ['username']
+        }
+      ]
+    })
+      .then(dbPostData => {
+        if (!dbPostData) {
+          res.status(404).json({ message: 'No recipe found with this id' });
+          return;
+        }
+        res.json(dbPostData);
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
   });
