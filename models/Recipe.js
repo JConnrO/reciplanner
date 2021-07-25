@@ -12,7 +12,12 @@ const sequelize = require('../config/connection');
         allowNull: false,
         primaryKey: true,
         autoIncrement: true
-      }
+      },
+      title: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      
     })
 
   module.exports = Recipe;
