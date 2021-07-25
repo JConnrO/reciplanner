@@ -12,16 +12,19 @@
 
 <body>
 	<div class="wrapper">
-		<header class="bg-success">
-			<nav>
+		<header>
+			<nav class="navbar navbar-expand-lg row">
 				{{!-- Make this a clickable link to go back!!!!!!!! --}}
+				{{!-- Add logo!!!!! --}}
 				<h1 class="text-white">ReciPlanner</h1>
-				{{!-- {{#if loggedIn}} --}}
-				<a href="/dashboard">My Recipes</a>
-				<button id="logout" class="btn-no-style">logout</button>
-				{{!-- {{else}} --}}
-				<a href="/login">login</a>
-				{{!-- {{/if}} --}}
+				<div class="login-wrapper">
+					{{!-- {{#if loggedIn}} --}}
+					<a href="/dashboard">My Recipes</a>
+					<button id="logout" class="btn-no-style">logout</button>
+					{{!-- {{else}} --}}
+					<a href="/login">login</a>
+					{{!-- {{/if}} --}}
+				</div>
 			</nav>
 		</header>
 		<main>

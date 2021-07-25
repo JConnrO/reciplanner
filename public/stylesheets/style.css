@@ -20,6 +20,7 @@ html {
 
 body {
     overflow-x: hidden;
+    background-color: var(--tertiary-color);
 }
 
 main {
@@ -29,14 +30,21 @@ main {
 header {
     padding: 20px 25px;  
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    background-color: var(--quaternary-color);
+    justify-content:space-between;
+    flex-wrap:wrap;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 999;
-    border-bottom: 2.5px solid black;
+    border-bottom: 2.5px solid var(--senary-color);
 }
+
+/* .login-wrapper {
+    align-self: flex-end;
+    display: flex;
+    justify-content:space-between;
+} */
 
 /* Mobile Responsiveness */
 
