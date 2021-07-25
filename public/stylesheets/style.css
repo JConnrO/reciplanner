@@ -1,3 +1,9 @@
+/* Styling for landing page cards */
+@media only screen and (min-width: 768px) {
+    .card{
+      width: 60%;
+    }
+  }
 * {
     margin: 0;
     padding: 0;
