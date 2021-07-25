@@ -4,6 +4,34 @@ const sequelize = require('../config/connection');
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
+// create our Recipe model
+class Recipe extends Model {
+    static upvote(body, models) {
+      return models.Vote.create({
+        user_id: body.user_id,
+        recipe_id: body.recipe_id
+      }).then(() => {
+        return Post.findOne({
+          where: {
+            id: body.recipe_id
+          },
+          attributes: [
+            'id',
+            'youtube_url',
+            'title',
+            'description',
+            'created_at',
+            [
+              sequelize.literal('(SELECT COUNT(*) FROM vote WHERE recipe.id = vote.recipe_id)'),
+              'vote_count'
+            ]
+          ]
+        });
+      });
+    }
+  }
+
+
 // create fields/columns for Recipe model
 Recipe.init(
     {
