@@ -24,6 +24,14 @@ const sequelize = require('../config/connection');
           isURL: true
         }
       },
+      post_url: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          isURL: true
+        }
+    },
+    
       
     })
 
