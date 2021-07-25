@@ -17,6 +17,13 @@ const sequelize = require('../config/connection');
         type: DataTypes.STRING,
         allowNull: false
       },
+      youtube_url: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          isURL: true
+        }
+      },
       
     })
 
