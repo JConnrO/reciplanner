@@ -1,6 +1,5 @@
 const express = require('express');
 const path = require('path');
-// const routes = require('./routes');
 const sequelize = require('./config/connection');
 const exphbs = require("express-handlebars");
 // Requires the 'express-session' module
@@ -17,7 +16,6 @@ app.set("view engine", "handlebars");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
-
 
 // turn on connection to db and server
 sequelize.sync({ force: false }).then(() => {
