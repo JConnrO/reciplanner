@@ -1,0 +1,57 @@
+/* Styling for landing page cards */
+@media only screen and (min-width: 768px) {
+    .card{
+      width: 60%;
+    }
+  }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root color scheme? */
+/* :root {
+   
+} */
+  
+/* html {
+    scroll-padding: 150px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+main {
+    min-height: calc(90vh - 285px);
+}
+
+header {
+    padding: 20px 25px;  
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    border-bottom: 2.5px solid black;
+} */
+
+/* Mobile Responsiveness */
+
+/* Large screens */
+@media screen and (max-width: 1415px){
+ 
+}
+
+/* Tablets and smaller*/
+@media screen and (max-width: 768px) {
+    
+}
+
+/* Mobile Responsivness for Galaxy Fold Duo/ iPhone 5 and smaller */
+@media screen and (max-width: 325px) {
+ 
+}

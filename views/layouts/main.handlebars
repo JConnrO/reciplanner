@@ -1,10 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
-		<title>RECIPES PLACE HOLDER FOR TITLE</title>
-	</head>
-	<body>
-		{{{ body }}}
-	</body>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ReciPlanner</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header>
+			<nav>
+				{{!-- Make this a clickable link to go back!!!!!!!! --}}
+				<h1 class="bg-success text-white">ReciPlanner</h1>
+				{{!-- {{#if loggedIn}} --}}
+				<a href="/dashboard">My Recipes</a>
+				<button id="logout" class="btn-no-style">logout</button>
+				{{!-- {{else}} --}}
+				<a href="/login">login</a>
+				{{!-- {{/if}} --}}
+			</nav>
+		</header>
+		<main>
+			{{{ body }}}
+		</main>
+		<footer>
+			{{!-- Will add footer similar to the Project 1 --}}
+			<div class="container">
+				<div class="copyright">
+					ReciPlanner, Copyright &copy; 2021
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+
 </html>
