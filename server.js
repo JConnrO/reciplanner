@@ -26,7 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
 // turn on connection to db and server
-sequelize.sync({ force: true}).then(() => {
+sequelize.sync({ force: false}).then(() => {
   app.listen(PORT, () => console.log(`Now listening on: http://localhost:${PORT}`));
 });
 
@@ -40,21 +40,21 @@ const posts = [
     title: 'Best Chicken Penne',
     link: 'https://www.youtube.com/watch?v=Qc2aPjIJk-8',
     description: 'Super Tasty',
-    upvote: 4000,
+    post_id: 4000,
     username: 'ssss'
   },
   {
     title: 'Amazing Chicken Marsala',
     link: 'https://www.youtube.com/watch?v=AWNU1OccN5Q',
     description: 'Much wow',
-    upvote: 2000,
+    post_id: 4000,
     username: 'ssss'
   },
   {
     title: 'Super simple Sushi',
     link: "https://www.youtube.com/watch?v=joweUxpHaqc",
     description: 'No way!',
-    upvote: 4,
+    post_id: 4000,
     username: 'ssss'
   }
 ];
@@ -62,7 +62,7 @@ const posts = [
 // Routes
 // =============================================================
 
-app.get('/', (req, res) => {
+app.get('/recipe', (req, res) => {
   // Send all of the books to 'index.handlebars' as an object
   const data = {
     cards: posts
