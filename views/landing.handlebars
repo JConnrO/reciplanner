@@ -1,22 +1,22 @@
-{{!-- TESTING DATA TO SEE IF ROUTE WORKS --}}
-{{!-- {{#each cards}}
-<div class="card">
-  <iframe src={{ link }} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  <div class="card-body">
-    <h5 class="card-title">{{ title }}</h5>
-    <p class="card-text">{{ description}}</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-{{/each}} --}}
-
 {{#each cards}}
 <div class="card mb-3">
   <div class="row g-0">
-    <div class="col-md-4">
-      <iframe src={{format_url link }} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="col-md-auto">
+    <button type="button" class="btn btn-secondary">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up"
+        viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z">
+        </path>
+      </svg>
+    </button>
+    <p>{{ upvote}}</p>
     </div>
-    <div class="col-md-8">
+    <div class="col-md-4">
+      <iframe src={{format_url link }} frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="col-md-4">
       <div class="card-body">
         <h5 class="card-title">{{ title }}</h5>
         <p class="card-text">{{description}}</p>

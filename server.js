@@ -36,21 +36,21 @@ const posts = [
     title: 'Best Chicken Penne',
     link: 'https://www.youtube.com/watch?v=Qc2aPjIJk-8',
     description: 'Super Tasty',
-    upvote: 'Robert Munsch',
+    upvote: 4000,
     username: 'ssss'
   },
   {
     title: 'Amazing Chicken Marsala',
     link: 'https://www.youtube.com/watch?v=AWNU1OccN5Q',
     description: 'Much wow',
-    upvote: 'Robert Munsch',
+    upvote: 2000,
     username: 'ssss'
   },
   {
     title: 'Super simple Sushi',
     link: "https://www.youtube.com/watch?v=joweUxpHaqc",
     description: 'No way!',
-    upvote: 'Robert Munsch',
+    upvote: 4,
     username: 'ssss'
   }
 ];
