@@ -1,10 +1,7 @@
 /* Styling for landing page cards */
 @media only screen and (min-width: 768px) {
-    iframe{
-      height: 13em;
-    }
     .card{
-      width: 50%;
+      width: 60%;
     }
   }
 * {

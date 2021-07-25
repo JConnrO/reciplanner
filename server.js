@@ -9,8 +9,12 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Sets Handlebars as the default template engine
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
+const helpers = require('./utils/helper');
+
+const hbs = exphbs.create({ helpers });
+
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
 
 
 app.use(express.json());
@@ -30,21 +34,21 @@ sequelize.sync({ force: false }).then(() => {
 const posts = [
   {
     title: 'Best Chicken Penne',
-    link: 'https://www.youtube.com/embed/Qc2aPjIJk-8',
+    link: 'https://www.youtube.com/watch?v=Qc2aPjIJk-8',
     description: 'Super Tasty',
     upvote: 'Robert Munsch',
     username: 'ssss'
   },
   {
     title: 'Amazing Chicken Marsala',
-    link: 'https://www.youtube.com/embed/AWNU1OccN5Q',
+    link: 'https://www.youtube.com/watch?v=AWNU1OccN5Q',
     description: 'Much wow',
     upvote: 'Robert Munsch',
     username: 'ssss'
   },
   {
     title: 'Super simple Sushi',
-    link: "https://www.youtube.com/embed/joweUxpHaqc",
+    link: "https://www.youtube.com/watch?v=joweUxpHaqc",
     description: 'No way!',
     upvote: 'Robert Munsch',
     username: 'ssss'
@@ -59,7 +63,7 @@ app.get('/', (req, res) => {
   const data = {
     cards: posts
   };
-  res.render('index', data);
+  res.render('landing', data);
 });
 
 //LOGIN dummy data SMM
