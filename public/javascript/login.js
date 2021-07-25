@@ -13,8 +13,8 @@ async function loginHandler(event) {
                 userEmail,
                 userPassword
             }),
-            headers: {'Content-'}
-        })
+            headers: {'Content-Type': ''}
+        });
 
     }
 
