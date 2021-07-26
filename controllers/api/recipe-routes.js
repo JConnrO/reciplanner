@@ -31,7 +31,7 @@ router.get('/', (req, res) => {
   });
 
   router.get('/:id', (req, res) => {
-    Post.findOne({
+    Recipe.findOne({
       where: {
         id: req.params.id
       },

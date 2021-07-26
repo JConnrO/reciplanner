@@ -19,7 +19,7 @@ Vote.init(
           key: 'id'
         }
       },
-      post_id: {
+      recipe_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {

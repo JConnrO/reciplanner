@@ -8,7 +8,7 @@ class Recipe extends Model {
         user_id: body.user_id,
         recipe_id: body.recipe_id
       }).then(() => {
-        return Post.findOne({
+        return Recipe.findOne({
           where: {
             id: body.recipe_id
           },
