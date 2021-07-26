@@ -2,7 +2,7 @@ const express = require('express');
 const routes = require('./controllers');
 const path = require('path');
 const sequelize = require('./config/connection');
-const exphbs = require("express-handlebars");
+const exphbs = require('express-handlebars');
 // Requires the 'express-session' module
 // const session = require(`express-session`);
 
@@ -10,7 +10,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Sets Handlebars as the default template engine
-const helpers = require('./utils/helper');
+const helpers = require('./utils/helpers');
 
 const hbs = exphbs.create({ helpers });
 
