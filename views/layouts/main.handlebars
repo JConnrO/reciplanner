@@ -13,14 +13,17 @@
 <body>
 	<div class="wrapper">
 		<header>
-			<nav>
-				{{!-- Make this a clickable link to go back!!!!!!!! --}}
-				<h1 class="bg-success text-white">ReciPlanner</h1>
+			{{!-- Make this a clickable link to go back!!!!!!!! --}}
+			{{!-- Add logo!!!!! --}}
+			<h1>
+				<a href="/" class="col-md-5">ReciPlanner</a>
+			</h1>
+			<nav class="navbar navbar-expand-lg row">
 				{{!-- {{#if loggedIn}} --}}
-				<a href="/dashboard">My Recipes</a>
-				<button id="logout" class="btn-no-style">logout</button>
+				<a href="/dashboard" class="col-md-4">My Recipes</a>
+				<button id="logout" class="btn-no-style col-md-2">logout</button>
 				{{!-- {{else}} --}}
-				<a href="/login">login</a>
+				<a href="/login" class="col-md-2">login</a>
 				{{!-- {{/if}} --}}
 			</nav>
 		</header>
