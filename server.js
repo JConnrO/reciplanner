@@ -45,40 +45,40 @@ sequelize.sync({ force: false}).then(() => {
 // Landing Page
 
 // DATA
-// const posts = [
-//   {
-//     title: 'Best Chicken Penne',
-//     link: 'https://www.youtube.com/watch?v=Qc2aPjIJk-8',
-//     description: 'Super Tasty',
-//     post_id: 4000,
-//     username: 'ssss'
-//   },
-//   {
-//     title: 'Amazing Chicken Marsala',
-//     link: 'https://www.youtube.com/watch?v=AWNU1OccN5Q',
-//     description: 'Much wow',
-//     post_id: 4000,
-//     username: 'ssss'
-//   },
-//   {
-//     title: 'Super simple Sushi',
-//     link: "https://www.youtube.com/watch?v=joweUxpHaqc",
-//     description: 'No way!',
-//     post_id: 4000,
-//     username: 'ssss'
-//   }
-// ];
+const newPosts = [
+  {
+    title: 'Best Chicken Penne',
+    link: 'https://www.youtube.com/watch?v=Qc2aPjIJk-8',
+    description: 'Super Tasty',
+    post_id: 4000,
+    username: 'ssss'
+  },
+  {
+    title: 'Amazing Chicken Marsala',
+    link: 'https://www.youtube.com/watch?v=AWNU1OccN5Q',
+    description: 'Much wow',
+    post_id: 4000,
+    username: 'ssss'
+  },
+  {
+    title: 'Super simple Sushi',
+    link: "https://www.youtube.com/watch?v=joweUxpHaqc",
+    description: 'No way!',
+    post_id: 4000,
+    username: 'ssss'
+  }
+];
 
-// // Routes
-// // =============================================================
+// Routes
+// =============================================================
 
-// app.get('/recipe', (req, res) => {
-//   // Send all of the books to 'index.handlebars' as an object
-//   const data = {
-//     cards: posts
-//   };
-//   res.render('landing', data);
-// });
+app.get('/', (req, res) => {
+  // Send all of the books to 'index.handlebars' as an object
+  const data = {
+    cards: newPosts
+  };
+  res.render('landing', data);
+});
 
 // //LOGIN dummy data SMM
 // const food = [

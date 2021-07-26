@@ -1,43 +1,16 @@
-// const { Model, DataTypes } = require('sequelize');
-// const sequelize = require('../config/connection');
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
 
-// class Vote extends Model { }
+class Vote extends Model { }
 
-// Vote.init(
-//   {
-//     id: {
-//       type: DataTypes.INTEGER,
-//       primaryKey: true,
-//       autoIncrement: true
-//     },
+Vote.init(
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+    },
 
-<<<<<<< HEAD
-//     user_id: {
-//       type: DataTypes.INTEGER,
-//       allowNull: false,
-//       references: {
-//         model: 'user',
-//         key: 'id'
-//       }
-//     },
-//     post_id: {
-//       type: DataTypes.INTEGER,
-//       allowNull: false,
-//       references: {
-//         model: 'recipe',
-//         key: 'id'
-//       }
-//     }
-//   },
-//   {
-//     sequelize,
-//     timestamps: false,
-//     freezeTableName: true,
-//     underscored: true,
-//     modelName: 'vote'
-//   }
-// );
-=======
       user_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
@@ -63,6 +36,5 @@
         modelName: 'vote'
       }
     );
->>>>>>> develop
 
-// module.exports = Vote;
+module.exports = Vote;

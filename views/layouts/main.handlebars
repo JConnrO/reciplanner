@@ -16,12 +16,12 @@
 			<nav>
 				{{!-- Make this a clickable link to go back!!!!!!!! --}}
 				<h1 class="bg-success text-white">ReciPlanner</h1>
-				{{!-- {{#if loggedIn}} --}}
+				{{#if loggedIn}}
 				<a href="/dashboard">My Recipes</a>
 				<button id="logout" class="btn-no-style">logout</button>
-				{{!-- {{else}} --}}
+				{{else}}
 				<a href="/login">login</a>
-				{{!-- {{/if}} --}}
+				{{/if}}
 			</nav>
 		</header>
 		<main>
