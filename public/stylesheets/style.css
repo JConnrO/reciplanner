@@ -46,6 +46,15 @@ header {
     border-bottom: 2.5px solid var(--senary-color);
 }
 
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
 /* .login-wrapper {
     align-self: flex-end;
     display: flex;
