@@ -14,37 +14,44 @@
     --senary-color: #212121;
 }
 
+
 body, html {
     height: 100%;
     padding: 0;
     margin: 0;
-    font-family: sans-serif;
+    font-family: 'Baloo Chettan 2', cursive;
     color: #333;
+    scroll-padding: 150px;
 }
-  
+
+main {
+    min-height: calc(90vh - 285px);
+    margin-top: 50px;
+}
+
 a {
     text-decoration: none;
     color: var(--primary-color);
     font-weight: bold;
     transition: color .1s;
 }
-  
+
 a:hover {
     color: var(--secondary-color);
     text-decoration: none;
 }
-  
+
 button {
     background-color: var(--quaternary-color);
     border: 0;
+    color: var(--senary-color);
     padding: 1%;
-    color: white;
-    font-weight: bold;
+    /* font-weight: bold; */
     transition: background-color .1s;
     cursor: pointer;
     border-radius: 5px;
 }
-  
+
 button:hover {
     background-color: var(--secondary-color);
 }
@@ -62,7 +69,7 @@ main {
 }
 
 header {
-    padding: 20px 25px;  
+    padding: 5px 10px;  
     display: flex;
     background-color: var(--quinary-color);
     justify-content:space-between;
@@ -74,14 +81,11 @@ header {
     border-bottom: 1px solid var(--senary-color);
 }
 
-/* .wrapper {
-    width: 100%;
-    min-height: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-} */
+.btn {
+    background-color: var(--quaternary-color);
+    color: var(--senary-color);
+}
+
 .btn-no-style {
     background: none;
     border: none;
@@ -100,19 +104,23 @@ header {
     color: var(--secondary-color);
 }
 
-/* .login-wrapper {
-    align-self: flex-end;
-    display: flex;
-    justify-content:space-between;
+/* .login-btn {
+    margin-left: 100%;
 } */
+
+form {
+    padding: 15px;
+}
 
 footer {
     border-top: 1px solid var(--senary-color);
+    border-bottom: 1px solid var(--senary-color);
     background-color: var(--quinary-color);
     display: flex;
     justify-content: center;
     padding: 1%;
     font-size: 110%;
+    margin-top: 10%;
 }
 
 .copyright {
