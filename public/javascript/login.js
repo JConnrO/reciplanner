@@ -2,12 +2,12 @@
 async function loginHandler(event) {
     event.preventDefault();
 
-    const userEmail = document.querySelector('.email-login').value.trim();
-    const userPassword = document.querySelector('.password-login').value.trim();
+    const email = document.querySelector('.email-login').value.trim();
+    const password = document.querySelector('.password-login').value.trim();
 
-    if (userEmail && userPassword) {
+    if (email && password) {
         // Need route to be to be fetched
-        const userResponse = await fetch('/api/user/login', {
+        const userResponse = await fetch('/api/users', {
             method: 'post',
             body: JSON.stringify({
                 email,
@@ -17,7 +17,7 @@ async function loginHandler(event) {
         });
         if (userResponse.ok) {
             //Replace dashboard
-            document.location.replace('');
+            document.location.replace('/');
         } else {
             alert(userResponse.statusText);
         }
@@ -27,14 +27,16 @@ async function loginHandler(event) {
 async function signupHandler(event) {
     event.preventDefault();
 
-    const emailSignup = document.querySelector('.email-signup').value.trim();
-    const passwordSignup = document.querySelector('.password-signup').value.trim();
+    const username = document.querySelector('.user-signup').value.trim();
+    const email = document.querySelector('.email-signup').value.trim();
+    const password = document.querySelector('.password-signup').value.trim();
 
-    if (emailSignup && passwordSignup) {
+    if (username && email && password) {
         // Need route to be to be fetched
-        const userResponse = await fetch('/api/user', {
+        const userResponse = await fetch('/api/users', {
             method: 'post',
             body: JSON.stringify({
+                username,
                 email,
                 password
             }),
@@ -42,7 +44,7 @@ async function signupHandler(event) {
         });
         if (userResponse.ok) {
             //Replace dashboard
-            document.location.replace('');
+            document.location.replace('/');
         } else {
             alert(userResponse.statusText);
         }
