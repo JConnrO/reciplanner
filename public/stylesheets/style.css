@@ -107,9 +107,33 @@ header {
 /* .login-btn {
     margin-left: 100%;
 } */
+/* section {
+    padding: .5%;
+    margin: auto 20px;
+} */
 
-form {
-    padding: 15px;
+textarea, input {
+    padding: .5%;
+    border-radius: 5px;
+    border: 1px solid var(--senary-color);
+}
+  
+textarea:focus, input:focus {
+    outline: none;
+    border: 1px solid var(--senary-color);
+}
+  
+textarea {
+    min-width: 40%;
+    min-height: 100px;
+}
+  
+form > div {
+    margin-bottom: 1%;
+}
+  
+form label {
+    display: block;
 }
 
 footer {
