@@ -14,12 +14,16 @@
 </form>
 
 <form class="signup-form container">
-  <h2 class="col-md-2">Create Account</h2>
-  <div class="col-md-4">
+  <h2 class="col-md-4">Create Account:</h2>
+  <div class="col-md-2">
+    <label for="user-signup">username:</label>
+    <input type="text" class="user-signup" />
+  </div>
+  <div class="col-md-2">
     <label for="email-signup">email:</label>
     <input type="text" class="email-signup" />
   </div>
-  <div class="col-md-4">
+  <div class="col-md-2">
     <label for="password-signup">password:</label>
     <input type="password" class="password-signup" />
   </div>
@@ -28,7 +32,7 @@
   </div>
 </form>
 
-<script src="/public/javascript/login.js"></script>
+<script src="/javascript/login.js"></script>
 
 {{!-- __Tests__ --}}
 {{!-- {{#each library}}

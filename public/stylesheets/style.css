@@ -24,18 +24,18 @@ body, html {
   
 a {
     text-decoration: none;
-    color: #225ca3;
+    color: var(--primary-color);
     font-weight: bold;
     transition: color .1s;
 }
   
 a:hover {
-    color: #3486eb;
+    color: var(--secondary-color);
     text-decoration: none;
 }
   
 button {
-    background-color: #225ca3;
+    background-color: var(--quaternary-color);
     border: 0;
     padding: 1%;
     color: white;
@@ -46,7 +46,7 @@ button {
 }
   
 button:hover {
-    background-color: #3486eb;
+    background-color: var(--secondary-color);
 }
 html {
     scroll-padding: 150px;
@@ -64,14 +64,14 @@ main {
 header {
     padding: 20px 25px;  
     display: flex;
-    background-color: var(--quaternary-color);
+    background-color: var(--quinary-color);
     justify-content:space-between;
     flex-wrap:wrap;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 999;
-    border-bottom: 2.5px solid var(--senary-color);
+    border-bottom: 1px solid var(--senary-color);
 }
 
 /* .wrapper {
@@ -88,7 +88,7 @@ header {
     padding: 0;
     cursor: pointer;
     text-decoration: none;
-    color: #225ca3;
+    color: var(--primary-color);
     font-size: 100%;
     font-weight: bold;
     transition: color .1s;
@@ -97,7 +97,7 @@ header {
   
 .btn-no-style:hover {
     background: none;
-    color: #3486eb;
+    color: var(--secondary-color);
 }
 
 /* .login-wrapper {
@@ -105,6 +105,20 @@ header {
     display: flex;
     justify-content:space-between;
 } */
+
+footer {
+    border-top: 1px solid var(--senary-color);
+    background-color: var(--quinary-color);
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    font-size: 110%;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+}
 
 /* Mobile Responsiveness */
 

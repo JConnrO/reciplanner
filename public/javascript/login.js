@@ -7,7 +7,7 @@ async function loginHandler(event) {
 
     if (userEmail && userPassword) {
         // Need route to be to be fetched
-        const userResponse = await fetch('/api/users/login', {
+        const userResponse = await fetch('/api/users', {
             method: 'post',
             body: JSON.stringify({
                 email,
@@ -27,14 +27,16 @@ async function loginHandler(event) {
 async function signupHandler(event) {
     event.preventDefault();
 
+    const usernameSignup = document.querySelector('.user-signup').value.trim();
     const emailSignup = document.querySelector('.email-signup').value.trim();
     const passwordSignup = document.querySelector('.password-signup').value.trim();
 
-    if (emailSignup && passwordSignup) {
+    if (usernameSignup && emailSignup && passwordSignup) {
         // Need route to be to be fetched
         const userResponse = await fetch('/api/users', {
             method: 'post',
             body: JSON.stringify({
+                username,
                 email,
                 password
             }),
@@ -42,7 +44,7 @@ async function signupHandler(event) {
         });
         if (userResponse.ok) {
             //Replace dashboard
-            document.location.replace('');
+            document.location.replace('/landing/');
         } else {
             alert(userResponse.statusText);
         }
