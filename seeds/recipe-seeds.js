@@ -4,31 +4,31 @@ const recipedata = [
   {
     title: 'Pizza',
     youtube_url: 'https://buzzfeed.com/in/imperdiet/et/commodo/vulputate.png',
-    description: 10,
+    description: 'string',
     user_id: 1
   },
   {
-    title: 'Pizza',
+    title: 'Hamburgers',
     youtube_url: 'https://buzzfeed.com/in/imperdiet/et/commodo/vulputate.png',
-    description: 10,
+    description: 'string',
     user_id: 2
   },
   {
-    title: 'Pizza',
+    title: 'Vegetables',
     youtube_url: 'https://buzzfeed.com/in/imperdiet/et/commodo/vulputate.png',
-    description: 10,
+    description: 'string',
     user_id: 3
   },
   {
     title: 'Pizza',
     youtube_url: 'https://buzzfeed.com/in/imperdiet/et/commodo/vulputate.png',
-    description: 10,
+    description: 'string',
     user_id: 4
   },
   {
     title: 'Pizza',
     youtube_url: 'https://buzzfeed.com/in/imperdiet/et/commodo/vulputate.png',
-    description: 10,
+    description: 'string',
     user_id: 5
   },
 
