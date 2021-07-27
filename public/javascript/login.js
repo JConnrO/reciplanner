@@ -2,10 +2,10 @@
 async function loginHandler(event) {
     event.preventDefault();
 
-    const userEmail = document.querySelector('.email-login').value.trim();
-    const userPassword = document.querySelector('.password-login').value.trim();
+    const email = document.querySelector('.email-login').value.trim();
+    const password = document.querySelector('.password-login').value.trim();
 
-    if (userEmail && userPassword) {
+    if (email && password) {
         // Need route to be to be fetched
         const userResponse = await fetch('/api/users', {
             method: 'post',
