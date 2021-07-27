@@ -17,7 +17,7 @@ async function loginHandler(event) {
         });
         if (userResponse.ok) {
             //Replace dashboard
-            document.location.replace('');
+            document.location.replace('/');
         } else {
             alert(userResponse.statusText);
         }
@@ -27,11 +27,11 @@ async function loginHandler(event) {
 async function signupHandler(event) {
     event.preventDefault();
 
-    const usernameSignup = document.querySelector('.user-signup').value.trim();
-    const emailSignup = document.querySelector('.email-signup').value.trim();
-    const passwordSignup = document.querySelector('.password-signup').value.trim();
+    const username = document.querySelector('.user-signup').value.trim();
+    const email = document.querySelector('.email-signup').value.trim();
+    const password = document.querySelector('.password-signup').value.trim();
 
-    if (usernameSignup && emailSignup && passwordSignup) {
+    if (username && email && password) {
         // Need route to be to be fetched
         const userResponse = await fetch('/api/users', {
             method: 'post',
@@ -44,7 +44,7 @@ async function signupHandler(event) {
         });
         if (userResponse.ok) {
             //Replace dashboard
-            document.location.replace('/landing/');
+            document.location.replace('/');
         } else {
             alert(userResponse.statusText);
         }
