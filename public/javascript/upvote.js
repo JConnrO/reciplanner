@@ -5,7 +5,7 @@ async function upvoteClickHandler(event) {
       window.location.toString().split('/').length - 1
     ];
     // api route will be updated once POST.JS model and controller is complete
-    const response = await fetch('/api/posts/upvote', {
+    const response = await fetch('/api/recipes/upvote', {
       method: 'PUT',
       body: JSON.stringify({
         post_id: id

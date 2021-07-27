@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const sequelize = require('../config/connection');
-const { Recipe, User, Vote } = require('../models');
+// const sequelize = require('../config/connection');
+// const { Recipe, User, Vote } = require('../models');
 
 // get all recipes for homepage
 // router.get('/', (req, res) => {
@@ -129,25 +129,25 @@ router.get('/', (req, res) => {
 
 // //LOGIN dummy data SMM
 
-// router.get('/login', (req, res) => {
-//     const food = [
-//         {
-//           title: 'Love You Forever',
-//           read: false,
-//           author: 'Robert Munsch'
-//         },
-//         {
-//           title: 'The Giving Tree',
-//           read: false,
-//           author: 'Shel Silverstein'
-//         }
-//       ]
+router.get('/login', (req, res) => {
+    const food = [
+        {
+          title: 'Love You Forever',
+          read: false,
+          author: 'Robert Munsch'
+        },
+        {
+          title: 'The Giving Tree',
+          read: false,
+          author: 'Shel Silverstein'
+        }
+      ]
 
-//     const data = {
-//       library: food
-//     };
-//     res.render('login', data);
-// });
+    const data = {
+      library: food
+    };
+    res.render('login', data);
+});
 
 
 
