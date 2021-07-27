@@ -1,25 +1,25 @@
 {{#each cards}}
-<div class="card mb-3">
+<div class="card mb-3 "> 
   <div class="row g-0">
     <div class="col-md-auto p-md-4">
-    <button type="button" class="btn btn-primary p-md-6" id="upvote" data-bs-toggle="button">
+    <button type="button" class="btn btn-primary p-md-6 animate__animated animate__bounce animate__delay-2s" id="upvote" data-bs-toggle="button">
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up"
         viewBox="0 0 16 16">
         <path fill-rule="evenodd"
           d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z">
         </path>
       </svg>
-    </button>
-    <p class="p-md-1">{{ upvote}}</p>
+    </button> 
+    <p class="p-md-1 ">{{ upvote}}</p>
     </div>
-    <div class="col-md-4 p-md-4">
+    <div class="col-md-4 p-md-4 animate__animated animate__pulse animate__delay-1s">
       <iframe src={{format_url link }} frameborder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <div class="col-md-4">
       <div class="card-body">
-        <h5 class="card-title">{{ title }}</h5>
-        <p class="card-text">{{description}}</p>
+        <h5 class="card-title p-md-4">{{ title }}</h5>
+        <p class="card-text p-md-4">{{description}}</p>
         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
       </div>
     </div>
