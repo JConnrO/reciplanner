@@ -149,8 +149,6 @@ router.get('/login', (req, res) => {
     res.render('login', data);
 });
 
-
-
 router.get('/dashboard', (req,res) =>{
   res.render('dashboard')
 })
