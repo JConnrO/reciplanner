@@ -7,7 +7,7 @@ async function loginHandler(event) {
 
     if (userEmail && userPassword) {
         // Need route to be to be fetched
-        const userResponse = await fetch('/api/user/login', {
+        const userResponse = await fetch('/api/users/login', {
             method: 'post',
             body: JSON.stringify({
                 email,
@@ -32,7 +32,7 @@ async function signupHandler(event) {
 
     if (emailSignup && passwordSignup) {
         // Need route to be to be fetched
-        const userResponse = await fetch('/api/user', {
+        const userResponse = await fetch('/api/users', {
             method: 'post',
             body: JSON.stringify({
                 email,
