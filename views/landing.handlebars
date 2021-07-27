@@ -1,8 +1,8 @@
 {{#each cards}}
-<div class="card mb-3">
+<div class="card mb-3 "> 
   <div class="row g-0">
     <div class="col-md-auto p-md-4">
-    <button type="button" class="btn btn-primary p-md-6" id="upvote" data-bs-toggle="button">
+    <button type="button" class="btn btn-primary p-md-6 animate__animated animate__bounce animate__delay-2s" id="upvote" data-bs-toggle="button">
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up"
         viewBox="0 0 16 16">
         <path fill-rule="evenodd"
@@ -10,9 +10,9 @@
         </path>
       </svg>
     </button>
-    <p class="p-md-1">{{ upvote}}</p>
+    <p class="p-md-1 ">{{ upvote}}</p>
     </div>
-    <div class="col-md-4 p-md-4">
+    <div class="col-md-4 p-md-4 animate__animated animate__tada animate__delay-1s">
       <iframe src={{format_url link }} frameborder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
