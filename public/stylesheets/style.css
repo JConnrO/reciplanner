@@ -1,9 +1,3 @@
-/* Styling for landing page cards */
-@media only screen and (min-width: 768px) {
-    .card{
-      width: 60%;
-    }
-  }
 * {
     margin: 0;
     padding: 0;
@@ -19,7 +13,41 @@
     --quinary-color: #91972a ;
     --senary-color: #212121;
 }
+
+body, html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    color: #333;
+}
   
+a {
+    text-decoration: none;
+    color: #225ca3;
+    font-weight: bold;
+    transition: color .1s;
+}
+  
+a:hover {
+    color: #3486eb;
+    text-decoration: none;
+}
+  
+button {
+    background-color: #225ca3;
+    border: 0;
+    padding: 1%;
+    color: white;
+    font-weight: bold;
+    transition: background-color .1s;
+    cursor: pointer;
+    border-radius: 5px;
+}
+  
+button:hover {
+    background-color: #3486eb;
+}
 html {
     scroll-padding: 150px;
 }
@@ -46,13 +74,30 @@ header {
     border-bottom: 2.5px solid var(--senary-color);
 }
 
-.wrapper {
+/* .wrapper {
     width: 100%;
     min-height: 100%;
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+} */
+.btn-no-style {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: #225ca3;
+    font-size: 100%;
+    font-weight: bold;
+    transition: color .1s;
+    margin-left: 16px;
+}
+  
+.btn-no-style:hover {
+    background: none;
+    color: #3486eb;
 }
 
 /* .login-wrapper {
@@ -65,7 +110,7 @@ header {
 
 /* Large screens */
 @media screen and (max-width: 1415px){
- 
+    
 }
 
 /* Tablets and smaller*/
@@ -75,5 +120,6 @@ header {
 
 /* Mobile Responsivness for Galaxy Fold Duo/ iPhone 5 and smaller */
 @media screen and (max-width: 325px) {
- 
+    
+    
 }
