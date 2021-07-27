@@ -14,7 +14,6 @@
     --senary-color: #212121;
 }
 
-
 body, html {
     height: 100%;
     padding: 0;
@@ -46,7 +45,6 @@ button {
     border: 0;
     color: var(--senary-color);
     padding: 1%;
-    /* font-weight: bold; */
     transition: background-color .1s;
     cursor: pointer;
     border-radius: 5px;
