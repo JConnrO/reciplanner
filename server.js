@@ -10,7 +10,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Sets Handlebars as the default template engine
-const helpers = require('./utils/helper');
+const helpers = require('./utils/helpers');
 
 const hbs = exphbs.create({ helpers });
 
@@ -33,7 +33,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
 // turn on connection to db and server
-sequelize.sync({ force: true}).then(() => {
+sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`Now listening on: http://localhost:${PORT}`));
 });
 
