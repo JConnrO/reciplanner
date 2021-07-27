@@ -7,7 +7,7 @@ async function loginHandler(event) {
 
     if (email && password) {
         // Need route to be to be fetched
-        const userResponse = await fetch('/api/users', {
+        const response = await fetch('/api/users', {
             method: 'post',
             body: JSON.stringify({
                 email,
@@ -15,11 +15,11 @@ async function loginHandler(event) {
             }),
             headers: { 'Content-Type': 'application/json' }
         });
-        if (userResponse.ok) {
+        if (response.ok) {
             //Replace dashboard
             document.location.replace('/');
         } else {
-            alert(userResponse.statusText);
+            alert(response.statusText);
         }
     }
 };
@@ -33,7 +33,7 @@ async function signupHandler(event) {
 
     if (username && email && password) {
         // Need route to be to be fetched
-        const userResponse = await fetch('/api/users', {
+        const response = await fetch('/api/users', {
             method: 'post',
             body: JSON.stringify({
                 username,
@@ -42,11 +42,11 @@ async function signupHandler(event) {
             }),
             headers: { 'Content-Type': 'application/json' }
         });
-        if (userResponse.ok) {
+        if (response.ok) {
             //Replace dashboard
             document.location.replace('/');
         } else {
-            alert(userResponse.statusText);
+            alert(response.statusText);
         }
     }
 };
