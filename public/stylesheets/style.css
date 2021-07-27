@@ -104,6 +104,14 @@ header {
     color: var(--secondary-color);
 }
 
+/* .login-btn {
+    margin-left: 100%;
+} */
+
+form {
+    padding: 15px;
+}
+
 footer {
     border-top: 1px solid var(--senary-color);
     border-bottom: 1px solid var(--senary-color);
