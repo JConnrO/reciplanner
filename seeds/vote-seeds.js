@@ -29,6 +29,14 @@ const votedata = [
     user_id: 2,
     recipe_id: 2
   },
+  {
+    user_id: 3,
+    recipe_id: 2
+  },
+  {
+    user_id: 5,
+    recipe_id: 2
+  },
 ];
 
 const seedVotes = () => Vote.bulkCreate(votedata);
