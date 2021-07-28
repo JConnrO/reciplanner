@@ -24,10 +24,13 @@
 			</h1>
 			<nav class="navbar navbar-expand-lg row">
 				{{!-- {{#if loggedIn}} --}}
-				<a href="/dashboard" class="col-md-4 animate__animated animate__headShake"><i class="fas fa-archive  "></i>My Recipes</a>
-				<button class="logout btn-no-style col-md-4 animate__animated animate__headShake"><i class="fas fa-sign-out "></i>Logout</button>
+				<a href="/dashboard" class="col-md-4 animate__animated animate__headShake"><i
+						class="fas fa-archive  "></i>My Recipes</a>
+				<button class="logout btn-no-style col-md-4 animate__animated animate__headShake" id="logout"><i
+						class="fas fa-sign-out "></i>Logout</button>
 				{{!-- {{else}} --}}
-				<a href="/login" class="animate__animated col-md-4 animate__headShake"><i class="fas fa-sign-in-alt"></i>Login</a>
+				<a href="/login" class="animate__animated col-md-4 animate__headShake"><i
+						class="fas fa-sign-in-alt"></i>Login</a>
 				{{!-- {{/if}} --}}
 			</nav>
 		</header>
@@ -75,6 +78,9 @@
 			</div>
 		</div>
 	</div>
+
+  <script src="/javascript/logout.js"></script>
+
 </body>
 
 </html>

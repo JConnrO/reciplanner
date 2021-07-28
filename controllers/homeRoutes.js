@@ -25,8 +25,8 @@ router.get('/', (req, res) => {
       const recipes = dbPostData.map(recipe => recipe.get({ plain: true }));
 
       res.render('landing', {
-        recipes
-        // loggedIn: req.session.loggedIn
+        recipes,
+        loggedIn: req.session.loggedIn
       });
     })
     .catch(err => {
@@ -35,6 +35,19 @@ router.get('/', (req, res) => {
     });
 });
 
+router.get('/login', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+
+  res.render('login');
+});
+
+router.get('/dashboard', (req,res) =>{
+  res.render('dashboard')
+})
+module.exports = router;
 // // get single post
 // router.get('/recipe/:id', (req, res) => {
 //   Recipe.findOne({
@@ -129,27 +142,23 @@ router.get('/', (req, res) => {
 
 // //LOGIN dummy data SMM
 
-router.get('/login', (req, res) => {
-    const food = [
-        {
-          title: 'Love You Forever',
-          read: false,
-          author: 'Robert Munsch'
-        },
-        {
-          title: 'The Giving Tree',
-          read: false,
-          author: 'Shel Silverstein'
-        }
-      ]
+// router.get('/login', (req, res) => {
+//     const food = [
+//         {
+//           title: 'Love You Forever',
+//           read: false,
+//           author: 'Robert Munsch'
+//         },
+//         {
+//           title: 'The Giving Tree',
+//           read: false,
+//           author: 'Shel Silverstein'
+//         }
+//       ]
 
-    const data = {
-      library: food
-    };
-    res.render('login', data);
-});
+//     const data = {
+//       library: food
+//     };
+//     res.render('login', data);
+// });
 
-router.get('/dashboard', (req,res) =>{
-  res.render('dashboard')
-})
-module.exports = router;
