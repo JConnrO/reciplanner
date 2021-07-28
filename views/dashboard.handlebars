@@ -14,15 +14,15 @@
       <label for="description">Describe the recipe:</label>
       <input id="description" class="description" name="description" />
     </div>
-    <button type="submit" class="btn">Create</button>
+    <button type="submit" class="btn hide">Create</button>
   </form>
 </section>
 
-{{#if recipe.length}}
+{{#if posts.length}}
 <section>
-  <h2>Your Posts</h2>z
+  <h2>Your Posts</h2>
   <ol>
-    {{#each recipes as |post|}}
+    {{#each posts as |post|}}
     <li>
       article class="post">
       <div class="title">
@@ -35,7 +35,7 @@
         <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
       </div>
       </article>
-      <a href="/dashboard/edit/{{recipe.id}}" class="edit-link">Edit post</a>
+      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
     </li>
     {{/each}}
   </ol>
