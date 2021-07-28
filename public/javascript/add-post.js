@@ -3,6 +3,7 @@ async function newFormHandler(event) {
 
   const title = document.querySelector('input[name="post-title"]').value;
   const youtube_url = document.querySelector('input[name="youtube-url"]').value;
+  const description = document.querySelector('input[name="description"]').value;
 
   const response = await fetch(`/api/recipes`, {
     method: 'POST',
@@ -17,7 +18,8 @@ async function newFormHandler(event) {
   });
 
   if (response.ok) {
-    document.location.replace('/dashboard');
+    // takes users to homepage
+    document.location.replace('/');
   } else {
     alert(response.statusText);
   }

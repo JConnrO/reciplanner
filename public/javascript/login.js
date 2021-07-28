@@ -7,7 +7,7 @@ async function loginHandler(event) {
 
     if (email && password) {
         // Need route to be to be fetched
-        const response = await fetch('/api/users', {
+        const response = await fetch('/api/users/login', {
             method: 'post',
             body: JSON.stringify({
                 email,
@@ -17,7 +17,7 @@ async function loginHandler(event) {
         });
         if (response.ok) {
             //Replace dashboard
-            document.location.replace('/');
+            document.location.replace('/dashboard');
         } else {
             alert(response.statusText);
         }
