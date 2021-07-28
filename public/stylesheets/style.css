@@ -125,6 +125,12 @@ textarea {
     min-width: 40%;
     min-height: 100px;
 }
+
+.description {
+    min-width: 40%;
+    min-height: 150px;
+    /* font-size: .05%; */
+}
   
 form > div {
     margin-bottom: 1%;
