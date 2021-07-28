@@ -1,9 +1,9 @@
 async function newFormHandler(event) {
   event.preventDefault();
 
-  const title = document.querySelector('input[name="post-title"]').value;
-  const youtube_url = document.querySelector('input[name="youtube-url"]').value;
-  const description = document.querySelector('input[name="description"]').value;
+  const title = document.querySelector('.post-title').value;
+  const youtube_url = document.querySelector('.youtube-url').value;
+  const description = document.querySelector('.description').value;
 
   const response = await fetch(`/api/recipes`, {
     method: 'POST',
