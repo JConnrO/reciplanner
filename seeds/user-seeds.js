@@ -3,8 +3,8 @@ const { User, Recipe } = require('../models');
 
 const userdata = [
   {
-    username: 'gordonramsey67',
-    email: 'gordonramsey67@yahoo.com',
+    username: 'lifeofpie',
+    email: 'lifeofpie@yahoo.com',
     password: 'password123'
   },
   {
@@ -13,17 +13,17 @@ const userdata = [
     password: 'password123'
   },
   {
-    username: 'gordonramsey70',
-    email: 'gordonramsey70@yahoo.com',
+    username: 'savethechikens',
+    email: 'nobeef70@yahoo.com',
     password: 'password123'
   },
   {
-    username: 'gordonramsey71',
-    email: 'gordonramsey70@goo.ne.jp',
+    username: 'chkpeasrlyfe',
+    email: 'peas@aol.com',
     password: 'password123'
   },
   {
-    username: 'gordonramsey75',
+    username: 'howdoicook',
     email: 'gmidggordonramsey75l4@weather.com',
     password: 'password123'
   },
