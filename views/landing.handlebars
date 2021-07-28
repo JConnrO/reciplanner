@@ -21,7 +21,7 @@
       <div class="card-body">
         <h5 class="card-title post-title p-md-4">{{ title }}</h5>
         <p class="card-text description p-md-4">{{ description}}</p>
-        <p class="card-text"><small class="text-muted">{{ created_at }} by {{user.username}}</small></p>
+        <p class="card-text"><small class="text-muted">{{format_date created_at }} by {{user.username}}</small></p>
       </div>
     </div>
   </div>
@@ -33,4 +33,4 @@
 <script src="/javascript/upvote.js"></script>
 {{/if}} --}}
 
-<script src='/javascript/add-post.js'></script>
+<script src="/javascript/upvote.js"></script>
