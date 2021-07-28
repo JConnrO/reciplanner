@@ -14,7 +14,6 @@
     --senary-color: #212121;
 }
 
-
 body, html {
     height: 100%;
     padding: 0;
@@ -46,7 +45,6 @@ button {
     border: 0;
     color: var(--senary-color);
     padding: 1%;
-    /* font-weight: bold; */
     transition: background-color .1s;
     cursor: pointer;
     border-radius: 5px;
@@ -81,6 +79,10 @@ header {
     border-bottom: 1px solid var(--senary-color);
 }
 
+header h1, a, button {
+    text-shadow: 1px 1px var(--senary-color);
+}
+
 .btn {
     background-color: var(--quaternary-color);
     color: var(--senary-color);
@@ -107,9 +109,39 @@ header {
 /* .login-btn {
     margin-left: 100%;
 } */
+/* section {
+    padding: .5%;
+    margin: auto 20px;
+} */
 
-form {
-    padding: 15px;
+textarea, input {
+    padding: .5%;
+    border-radius: 5px;
+    border: 1px solid var(--senary-color);
+}
+  
+textarea:focus, input:focus {
+    outline: none;
+    border: 1px solid var(--senary-color);
+}
+  
+textarea {
+    min-width: 40%;
+    min-height: 100px;
+}
+
+.description {
+    min-width: 40%;
+    min-height: 150px;
+    /* font-size: .05%; */
+}
+  
+form > div {
+    margin-bottom: 1%;
+}
+  
+form label {
+    display: block;
 }
 
 footer {
@@ -139,6 +171,10 @@ footer {
 
 .text-muted{
     font-size: 15px;
+}
+
+.hide {
+    text-shadow: none;
 }
 /* Mobile Responsiveness */
 
