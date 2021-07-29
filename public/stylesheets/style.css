@@ -82,6 +82,11 @@ header h1, a, button {
     text-shadow: 1px 1px var(--senary-color);
 }
 
+/* LOGIN */
+.login-signup-section {
+    margin: 2% auto;
+}
+
 /* HERO styling if we want it */
 /* .hero {
     background-image: url('../assets/images/istockphoto-1004108530-612x612\(Phone\ and\ food\).jpg');
@@ -108,6 +113,7 @@ header h1, a, button {
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 } */
 
+/* BUTTONS */
 .btn {
     background-color: var(--quaternary-color);
     color: var(--senary-color);
@@ -131,6 +137,11 @@ header h1, a, button {
     color: var(--secondary-color);
 }
 
+/* CREATE POST */
+.create-new-post {
+    margin: 2% 2%;
+}
+
 .post-title, .new-post-title {
     display: flex;
     justify-content: center;
@@ -143,6 +154,12 @@ header h1, a, button {
     align-items: center;
 }
 
+.create-btn {
+    margin: 1% 20px;
+    padding-right: 2%;
+}
+
+/* EDIT and  DELETE POST */
 .recipe-title-card {
     margin: 15px auto;
     padding: 1.5%;
@@ -163,7 +180,6 @@ header h1, a, button {
     color: var(--senary-color);
 }
 
-
 .edit-link-btn:hover {
     background-color: var(--secondary-color);
     text-decoration: none;
@@ -173,44 +189,6 @@ header h1, a, button {
 .edit-link-btn {
     margin: 1% 20px;
 }
-
-.create-new-post {
-    margin: 2% 2%;
-}
-
-.new-post-title {
-    /* padding: 2%; */
-}
-
-.create-btn {
-    margin: 1% 20px;
-    padding-right: 2%;
-
-}
-
-/* .edit-link {
-    background-color: var(--quaternary-color);
-    border: 0;
-    color: var(--senary-color);
-    padding: 1%;
-    transition: background-color .1s;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: none;
-    text-decoration: none;
-} */
-
-/* .edit-link:hover {
-    background: none;
-} */
-
-/* .login-btn {
-    margin-left: 100%;
-} */
-/* section {
-    padding: .5%;
-    margin: auto 20px;
-} */
 
 /* TEXT AREA */
 textarea, input {
@@ -229,12 +207,12 @@ textarea {
     min-height: 100px;
 }
 
-.description {
+/* .description {
     min-width: 40%;
     min-height: 150px;
-}
+} */
 
-/* styling for title, description, and user created postes on landing page */
+/* Styling for title, description, and user created postes on LANDING page */
 .post-title{
     font-size: 30px;
 }
@@ -251,6 +229,7 @@ textarea {
     text-shadow: none;
 }
 
+/* Styling for FORMS and FOOTER */
 form > div {
     margin-bottom: 1%;
 }
