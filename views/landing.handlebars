@@ -1,8 +1,29 @@
-{{!-- displays all  recipes posts created by user--}}
+{{!-- Was working on a hero for some FLARE --}}
+{{!-- <section class="hero">
+  <div class="hero-container">
+    <h2>About ReciPlanner</h2>
+    <p>
+      Have you ever wanted a place where you could find recipe ideas online, and be able to share your own ideas for
+      others to see all in the same location? Well, now you can with, ReciPlanner!!!
+      <br>
+      What could be considered the new "Reddit" of recipes and meal plans, ReciPlanner is filled with recipes shared
+      from many users. With a user friendly landing page, you can see which ones are the most popular, and with the
+      upvote system, you can vote which ones are your favorite. Add the ones you like the most to your recipe list, so
+      you can always find them for later. After adding a recipe to ReciPlanner you can share them with others, but don't
+      worry, you can always edit or delete them later! We’ve got a constant stream of YouTube cooking videos for you to
+      checkout, in addition to great meal prep routines!
+      <br>
+      Say goodby to the extra hassle, and sign up to ReciPlanner to start meal prepping YOUR way, today!
+    </p>
+  </div>
+</section> --}}
+
+{{!-- displays all recipes posts created by user--}}
 {{#each recipes}}
-<div class="card mb-3 "> 
+<div class="card mb-3 ">
   <div class="row g-0">
     <div class="col-md-auto p-md-4">
+<<<<<<< HEAD
     <button type="button" class="btn p-md-6 animate__animated animate__bounceIn" id="upvote" data-bs-toggle="button">
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up"
         viewBox="0 0 16 16">
@@ -12,6 +33,17 @@
       </svg>
     </button> 
     <p class="p-md-1" id="upvoteCount" data-user_id= "user_id" data-recipe_id='recipe_id'>{{ vote_count}}</p>
+=======
+      <button type="button" class="btn p-md-6 animate__animated animate__bounceIn" id="upvote" data-bs-toggle="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z">
+          </path>
+        </svg>
+      </button>
+      <p class="p-md-1 ">{{ vote_count}}</p>
+>>>>>>> develop2
     </div>
     <div class="col-md-4 p-md-4 animate__animated animate__pulse animate__delay-1s youtube-url">
       <iframe width="400" height="200" src={{format_url youtube_url }} frameborder="0"

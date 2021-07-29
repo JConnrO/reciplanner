@@ -1,41 +1,53 @@
-<section class="card mb-3">
-  <h2>Create New Post:</h2>
+<section class="create-new-post">
+  <h2 class="new-post-title">Create New Post</h2>
 
-  <form class="new-post-form">
+  <form class="new-post-form card">
     <div>
-      <label for="post-title">Title:</label>
+      <label for="post-title col-md-2">Title:</label>
       <input type="text" id="post-title" name="post-title" />
     </div>
     <div>
-      <label for="youtube-url">Youtube Link:</label>
+      <label for="youtube-url col-md-2">Youtube Link:</label>
       <input id="youtube-url" name="youtube-url" />
     </div>
     <div>
-      <label for="description">Describe the recipe:</label>
+      <label for="description col-md-2">Describe the recipe:</label>
       <input id="description" class="description" name="description" />
     </div>
-    <button type="submit" class="btn hide">Create</button>
+    <div class="container">
+      <button type="submit" class="create-btn btn hide col-md-2 ">Create</button>
+    </div>
+    
   </form>
 </section>
 
-{{#if posts.length}}
+{{#if recipes.length}}
 <section>
-  <h2>Your Posts</h2>
+  <h2 class="post-title">Your Posts</h2>
   <ol>
-    {{#each posts as |post|}}
+    {{#each recipes}}
     <li>
-      article class="post">
-      <div class="title">
-        <a href="{{post_url}}" target="_blank">{{title}}</a>
-        <span>({{format_url post_url}})</span>
-      </div>
-      <div class="meta">
-        {{vote_count}} {{format_plural "point" vote_count}} by {{user.username}} on {{format_date created_at}}
-        |
-        <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
-      </div>
+      <article class="post container card mb-3">
+        <div class="recipe-title-card container row">
+          <a href="{{title}}" target="_blank" class="recipe-title card-title col-md-3">{{title}}</a>
+          <span class="col-md-auto">({{description}})</span>
+        </div>
+        {{!-- <div class="meta">
+          {{vote_count}} {{ "point" vote_count}} by {{user.username}} on {{format_date created_at}}
+          |
+          <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+        </div> --}}
+        {{!-- <div class="col-md-2 animate__animated animate__pulse animate__delay-1s youtube-url">
+          <iframe width="400" height="200" src={{format_url youtube_url }} frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div> --}}
+        {{!-- <button type="submit" class="hide col-md-">Save post</button> --}}
+        <div class="container row justify-content-end edit-delete-btn">
+          <button type="button" class="delete-post-btn hide col-md-2 p-md-2">Delete post</button>
+          <a href="/dashboard/edit/{{recipes.id}}" class="edit-link-btn btn hide col-md-2 p-md-2">Edit post</a>
+        </div>
+
       </article>
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
     </li>
     {{/each}}
   </ol>

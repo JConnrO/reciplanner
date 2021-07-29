@@ -19,13 +19,11 @@ body, html {
     padding: 0;
     margin: 0;
     font-family: 'Baloo Chettan 2', cursive;
-    color: #333;
     scroll-padding: 150px;
 }
 
 main {
     min-height: calc(90vh - 285px);
-    margin-top: 50px;
 }
 
 a {
@@ -77,12 +75,45 @@ header {
     top: 0;
     z-index: 999;
     border-bottom: 1px solid var(--senary-color);
+    font-size: 20px;
 }
 
 header h1, a, button {
     text-shadow: 1px 1px var(--senary-color);
 }
 
+/* LOGIN */
+.login-signup-section {
+    margin: 2% auto;
+}
+
+/* HERO styling if we want it */
+/* .hero {
+    background-image: url('../assets/images/istockphoto-1004108530-612x612\(Phone\ and\ food\).jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.hero-container {
+    width: 35%;
+    text-align: left;
+    margin: 3.5%;
+    color: var(--tertiary-color);
+    font-size: 18px;
+    line-height: 1.2;
+  }
+  
+.hero-container h2 {
+    font-size: 50px;
+    color: var(--tertiary-color);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+} */
+
+/* BUTTONS */
 .btn {
     background-color: var(--quaternary-color);
     color: var(--senary-color);
@@ -106,14 +137,60 @@ header h1, a, button {
     color: var(--secondary-color);
 }
 
-/* .login-btn {
-    margin-left: 100%;
-} */
-/* section {
-    padding: .5%;
-    margin: auto 20px;
-} */
+/* CREATE POST */
+.create-new-post {
+    margin: 2% 2%;
+}
 
+.post-title, .new-post-title {
+    display: flex;
+    justify-content: center;
+}
+
+.post {
+    margin: 15px auto;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.create-btn {
+    margin: 1% 20px;
+    padding-right: 2%;
+}
+
+/* EDIT and  DELETE POST */
+.recipe-title-card {
+    margin: 15px auto;
+    padding: 1.5%;
+}
+
+.recipe-title {
+    text-decoration: none;
+    color: var(--senary-color);
+    font-weight: lighter;
+    transition: none;
+    font-style: none;
+    text-shadow: none;
+    font-size: 25px;
+}
+
+.recipe-title:hover {
+    background: none;
+    color: var(--senary-color);
+}
+
+.edit-link-btn:hover {
+    background-color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.delete-post-btn, 
+.edit-link-btn {
+    margin: 1% 20px;
+}
+
+/* TEXT AREA */
 textarea, input {
     padding: .5%;
     border-radius: 5px;
@@ -130,12 +207,29 @@ textarea {
     min-height: 100px;
 }
 
-.description {
+/* .description {
     min-width: 40%;
     min-height: 150px;
-    /* font-size: .05%; */
+} */
+
+/* Styling for title, description, and user created postes on LANDING page */
+.post-title{
+    font-size: 30px;
 }
-  
+
+.description{
+    font-size: 20px;
+}
+
+.text-muted{
+    font-size: 15px;
+}
+
+.hide {
+    text-shadow: none;
+}
+
+/* Styling for FORMS and FOOTER */
 form > div {
     margin-bottom: 1%;
 }
@@ -154,28 +248,11 @@ footer {
     font-size: 110%;
     margin-top: 10%;
 }
-
 .copyright {
     display: flex;
     justify-content: center;
 }
 
-/* styling for title, description, and user created postes on landing page */
-.post-title{
-    font-size: 30px;
-}
-
-.description{
-    font-size: 20px;
-}
-
-.text-muted{
-    font-size: 15px;
-}
-
-.hide {
-    text-shadow: none;
-}
 /* Mobile Responsiveness */
 
 /* Large screens */
