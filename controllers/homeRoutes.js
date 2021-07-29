@@ -22,6 +22,8 @@ router.get('/', (req, res) => {
     ]
   })
     .then(dbPostData => {
+      console.log(dbPostData.recipe)
+
       const recipes = dbPostData.map(recipe => recipe.get({ plain: true }));
 
       res.render('landing', {
@@ -44,9 +46,38 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-router.get('/dashboard', (req,res) =>{
-  res.render('dashboard')
-})
+router.get('/dashboard', (req, res) => {
+  console.log('======================');
+  Recipe.findAll({
+    attributes: [
+      'id',
+      'youtube_url',
+      'title',
+      'description',
+      'created_at',
+      [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE recipe.id = vote.recipe_id)'), 'vote_count']
+    ],
+    include: [
+      {
+        model: User,
+        attributes: ['username']
+      }
+    ]
+  })
+    .then(dbPostData => {
+      console.log(dbPostData)
+      const recipes = dbPostData.map(recipe => recipe.get({ plain: true }));
+
+      res.render('dashboard', {
+        recipes,
+        loggedIn: req.session.loggedIn
+      });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
 module.exports = router;
 // // get single post
 // router.get('/recipe/:id', (req, res) => {

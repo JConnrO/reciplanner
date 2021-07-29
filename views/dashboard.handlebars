@@ -18,24 +18,30 @@
   </form>
 </section>
 
-{{#if posts.length}}
+{{#if recipes.length}}
 <section>
   <h2>Your Posts</h2>
   <ol>
-    {{#each posts as |post|}}
+    {{#each recipes}}
     <li>
-      article class="post">
-      <div class="title">
-        <a href="{{post_url}}" target="_blank">{{title}}</a>
-        <span>({{format_url post_url}})</span>
-      </div>
-      <div class="meta">
-        {{vote_count}} {{format_plural "point" vote_count}} by {{user.username}} on {{format_date created_at}}
-        |
-        <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
-      </div>
+      <article class="post container card mb-3">
+        <div class="title">
+          <a href="{{title}}" target="_blank">{{title}}</a>
+          <span>({{description}})</span>
+        </div>
+        {{!-- <div class="meta">
+          {{vote_count}} {{ "point" vote_count}} by {{user.username}} on {{format_date created_at}}
+          |
+          <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+        </div> --}}
+        {{!-- <div class="col-md-2 animate__animated animate__pulse animate__delay-1s youtube-url">
+          <iframe width="400" height="200" src={{format_url youtube_url }} frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div> --}}
+        <button type="submit" class="hide col-md-">Save post</button>
+        <button type="button" class="delete-post-btn hide col-md-">Delete post</button>
+        <a href="/dashboard/edit/{{recipes.id}}" class="edit-link col-md-">Edit post</a>
       </article>
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
     </li>
     {{/each}}
   </ol>

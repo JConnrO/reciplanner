@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 const { Recipe, User, Vote } = require('../models');
 
 // get all posts for homepage
-router.get('/', (req, res) => {
+router.get('/dashboard', (req, res) => {
   console.log('======================');
   Recipe.findAll({
     attributes: [
@@ -22,9 +22,10 @@ router.get('/', (req, res) => {
     ]
   })
     .then(dbPostData => {
+      console.log(dbPostData)
       const recipes = dbPostData.map(recipe => recipe.get({ plain: true }));
 
-      res.render('homepage', {
+      res.render('dashboard', {
         recipes,
         loggedIn: req.session.loggedIn
       });
@@ -64,6 +65,7 @@ router.get('/recipe/:id', (req, res) => {
 
       const recipe = dbPostData.get({ plain: true });
 
+      // Create handlebar template
       res.render('single-post', {
         recipe,
         loggedIn: req.session.loggedIn
