@@ -160,11 +160,18 @@ header h1, a, button {
     background: none;
 }
 
-.edit-delete-btn {
-    padding: 15px;
+
+.edit-link-btn:hover {
+    background-color: var(--secondary-color);
+    text-decoration: none;
 }
 
-.edit-link {
+.delete-post-btn, 
+.edit-link-btn {
+    margin: 1% 20px;
+}
+
+/* .edit-link {
     background-color: var(--quaternary-color);
     border: 0;
     color: var(--senary-color);
@@ -174,7 +181,7 @@ header h1, a, button {
     border-radius: 5px;
     font-weight: none;
     text-decoration: none;
-}
+} */
 
 /* .edit-link:hover {
     background: none;
@@ -209,7 +216,24 @@ textarea {
     min-height: 150px;
     /* font-size: .05%; */
 }
-  
+
+/* styling for title, description, and user created postes on landing page */
+.post-title{
+    font-size: 30px;
+}
+
+.description{
+    font-size: 20px;
+}
+
+.text-muted{
+    font-size: 15px;
+}
+
+.hide {
+    text-shadow: none;
+}
+
 form > div {
     margin-bottom: 1%;
 }
@@ -228,28 +252,11 @@ footer {
     font-size: 110%;
     margin-top: 10%;
 }
-
 .copyright {
     display: flex;
     justify-content: center;
 }
 
-/* styling for title, description, and user created postes on landing page */
-.post-title{
-    font-size: 30px;
-}
-
-.description{
-    font-size: 20px;
-}
-
-.text-muted{
-    font-size: 15px;
-}
-
-.hide {
-    text-shadow: none;
-}
 /* Mobile Responsiveness */
 
 /* Large screens */
