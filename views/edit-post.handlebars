@@ -5,14 +5,11 @@
   </h2>
   <form class="edit-post-form">
     <div>
-      <input name="recipe-title" type="text" value="{{recipe.title}}" />
-      <span>({{format_url recipe.youtube_url}})</span>
+      <h3>Title:</h3>
+      <input name="recipe-title" type="text" value="{{title}}" />
     </div>
     <div>
-      {{recipe.vote_count}} {{format_plural "point" recipe.vote_count}} by you on {{format_date recipe.created_at}}
-      |
-    </div>
-    <div>
+      <h3>description:</h3>
       <input name="recipe-description" type="text" value="{{recipe.description}}" />
       <span>({{recipe.description}})</span>
     </div>
