@@ -4,7 +4,7 @@ const { Recipe, User, Vote } = require('../models');
 const withAuth = require('../utils/auth');
 
 // get all posts for homepage
-router.get('/', (req, res) => {
+router.get('/', withAuth, (req, res) => {
   console.log('======================');
   Recipe.findAll({
     attributes: [
@@ -37,7 +37,7 @@ router.get('/', (req, res) => {
 });
 
 // get single post
-router.get('/recipe/:id', (req, res) => {
+router.get('/recipe/:id', withAuth, (req, res) => {
   Recipe.findOne({
     where: {
       id: req.params.id
