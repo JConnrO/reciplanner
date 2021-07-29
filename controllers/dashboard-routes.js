@@ -23,9 +23,10 @@ router.get('/', withAuth, (req, res) => {
     ]
   })
     .then(dbPostData => {
+      console.log(dbPostData)
       const recipes = dbPostData.map(recipe => recipe.get({ plain: true }));
 
-      res.render('homepage', {
+      res.render('dashboard', {
         recipes,
         loggedIn: req.session.loggedIn
       });
@@ -100,6 +101,7 @@ router.get('/recipe/:id', withAuth, (req, res) => {
 
       const recipe = dbPostData.get({ plain: true });
 
+      // Create handlebar template
       res.render('single-post', {
         recipe,
         loggedIn: req.session.loggedIn
