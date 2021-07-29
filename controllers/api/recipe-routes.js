@@ -93,7 +93,8 @@ router.put('/upvote', (req, res) => {
   router.put('/:id', (req, res) => {
     Recipe.update(
       {
-        title: req.body.title
+        title: req.body.title,
+        description: req.body.description
       },
       {
         where: {
