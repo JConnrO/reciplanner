@@ -25,7 +25,6 @@ body, html {
 
 main {
     min-height: calc(90vh - 285px);
-    margin-top: 50px;
 }
 
 a {
@@ -77,11 +76,38 @@ header {
     top: 0;
     z-index: 999;
     border-bottom: 1px solid var(--senary-color);
+    font-size: 20px;
 }
 
 header h1, a, button {
     text-shadow: 1px 1px var(--senary-color);
 }
+
+/* HERO styling if we want it */
+/* .hero {
+    background-image: url('../assets/images/istockphoto-1004108530-612x612\(Phone\ and\ food\).jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.hero-cta {
+    width: 35%;
+    text-align: right;
+    margin: 3.5%;
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.2;
+  }
+  
+.hero-cta h2 {
+    font-size: 55px;
+    color: var();
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+} */
 
 .btn {
     background-color: var(--quaternary-color);
@@ -105,6 +131,54 @@ header h1, a, button {
     background: none;
     color: var(--secondary-color);
 }
+
+.post-title {
+    display: flex;
+    justify-content: center;
+}
+
+.post {
+    margin: 15px auto;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.recipe-title-card {
+    margin: 15px auto;
+    padding: 2.5%;
+}
+
+.recipe-title {
+    text-decoration: none;
+    color: var(--senary-color);
+    font-weight: none;
+    transition: none;
+}
+
+.recipe-title:hover {
+    background: none;
+}
+
+.edit-delete-btn {
+    padding: 15px;
+}
+
+.edit-link {
+    background-color: var(--quaternary-color);
+    border: 0;
+    color: var(--senary-color);
+    padding: 1%;
+    transition: background-color .1s;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: none;
+    text-decoration: none;
+}
+
+/* .edit-link:hover {
+    background: none;
+} */
 
 /* .login-btn {
     margin-left: 100%;

@@ -20,14 +20,14 @@
 
 {{#if recipes.length}}
 <section>
-  <h2>Your Posts</h2>
+  <h2 class="post-title">Your Posts</h2>
   <ol>
     {{#each recipes}}
     <li>
       <article class="post container card mb-3">
-        <div class="title">
-          <a href="{{title}}" target="_blank">{{title}}</a>
-          <span>({{description}})</span>
+        <div class="recipe-title-card container row">
+          <a href="{{title}}" target="_blank" class="recipe-title col-md-3">{{title}}</a>
+          <span class="col-md-auto">({{description}})</span>
         </div>
         {{!-- <div class="meta">
           {{vote_count}} {{ "point" vote_count}} by {{user.username}} on {{format_date created_at}}
@@ -38,9 +38,12 @@
           <iframe width="400" height="200" src={{format_url youtube_url }} frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div> --}}
-        <button type="submit" class="hide col-md-">Save post</button>
-        <button type="button" class="delete-post-btn hide col-md-">Delete post</button>
-        <a href="/dashboard/edit/{{recipes.id}}" class="edit-link col-md-">Edit post</a>
+        {{!-- <button type="submit" class="hide col-md-">Save post</button> --}}
+        <div class="container row justify-content-end edit-delete-btn">
+          <button type="button" class="delete-post-btn hide col-md-2 p-md-2">Delete post</button>
+          <a href="/dashboard/edit/{{recipes.id}}" class="edit-link hide col-md-2 p-md-2">Edit post</a>
+        </div>
+
       </article>
     </li>
     {{/each}}
