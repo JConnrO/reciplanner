@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Recipe, User, Vote } = require('../models');
+const withAuth = require('../utils/auth');
 
 // get all recipes for homepage
 router.get('/', (req, res) => {
