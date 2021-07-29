@@ -19,7 +19,6 @@ body, html {
     padding: 0;
     margin: 0;
     font-family: 'Baloo Chettan 2', cursive;
-    color: #333;
     scroll-padding: 150px;
 }
 
@@ -132,7 +131,7 @@ header h1, a, button {
     color: var(--secondary-color);
 }
 
-.post-title {
+.post-title, .new-post-title {
     display: flex;
     justify-content: center;
 }
@@ -146,18 +145,22 @@ header h1, a, button {
 
 .recipe-title-card {
     margin: 15px auto;
-    padding: 2.5%;
+    padding: 1.5%;
 }
 
 .recipe-title {
     text-decoration: none;
     color: var(--senary-color);
-    font-weight: none;
+    font-weight: lighter;
     transition: none;
+    font-style: none;
+    text-shadow: none;
+    font-size: 25px;
 }
 
 .recipe-title:hover {
     background: none;
+    color: var(--senary-color);
 }
 
 
@@ -169,6 +172,20 @@ header h1, a, button {
 .delete-post-btn, 
 .edit-link-btn {
     margin: 1% 20px;
+}
+
+.create-new-post {
+    margin: 2% 2%;
+}
+
+.new-post-title {
+    /* padding: 2%; */
+}
+
+.create-btn {
+    margin: 1% 20px;
+    padding-right: 2%;
+
 }
 
 /* .edit-link {
@@ -195,6 +212,7 @@ header h1, a, button {
     margin: auto 20px;
 } */
 
+/* TEXT AREA */
 textarea, input {
     padding: .5%;
     border-radius: 5px;
@@ -214,7 +232,6 @@ textarea {
 .description {
     min-width: 40%;
     min-height: 150px;
-    /* font-size: .05%; */
 }
 
 /* styling for title, description, and user created postes on landing page */
