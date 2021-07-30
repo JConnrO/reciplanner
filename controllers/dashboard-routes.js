@@ -23,9 +23,10 @@ router.get('/', withAuth, (req, res) => {
     ]
   })
     .then(dbPostData => {
-      console.log(dbPostData)
+      // console.log(dbPostData)
       const recipes = dbPostData.map(recipe => recipe.get({ plain: true }));
-
+      console.log('RECIPES DATA VALUES');
+      console.log(recipes[0].dataValues);
       res.render('dashboard', {
         recipes,
         loggedIn: req.session.loggedIn
