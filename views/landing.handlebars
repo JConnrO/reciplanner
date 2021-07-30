@@ -1,26 +1,19 @@
-{{!-- Was working on a hero for some FLARE --}}
-{{!-- <section class="hero">
-  <div class="hero-container">
+{{!-- Added hero for some FLARE --}}
+<section class="hero-section">
+  <div class="card hero-container">
     <h2>About ReciPlanner</h2>
     <p>
       Have you ever wanted a place where you could find recipe ideas online, and be able to share your own ideas for
       others to see all in the same location? Well, now you can with, ReciPlanner!!!
       <br>
-      What could be considered the new "Reddit" of recipes and meal plans, ReciPlanner is filled with recipes shared
-      from many users. With a user friendly landing page, you can see which ones are the most popular, and with the
-      upvote system, you can vote which ones are your favorite. Add the ones you like the most to your recipe list, so
-      you can always find them for later. After adding a recipe to ReciPlanner you can share them with others, but don't
-      worry, you can always edit or delete them later! We’ve got a constant stream of YouTube cooking videos for you to
-      checkout, in addition to great meal prep routines!
-      <br>
       Say goodby to the extra hassle, and sign up to ReciPlanner to start meal prepping YOUR way, today!
     </p>
   </div>
-</section> --}}
+</section>
 
 {{!-- displays all recipes posts created by user--}}
 {{#each recipes}}
-<div class="card mb-3 ">
+<div class="user-recipes-container card mb-3 ">
   <div class="row g-0">
     <div class="col-md-auto p-md-4">
       <button type="button" class="btn p-md-6 animate__animated animate__bounceIn" id="upvote" data-bs-toggle="button">
