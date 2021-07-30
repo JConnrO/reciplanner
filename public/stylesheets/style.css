@@ -142,7 +142,7 @@ header h1, a, button {
     margin: 2% 2%;
 }
 
-.post-title, .new-post-title {
+.post-title, .new-post-title, .edit-post-title {
     display: flex;
     justify-content: center;
 }
@@ -165,7 +165,7 @@ header h1, a, button {
     padding: 1.5%;
 }
 
-.recipe-title {
+.recipe-title, .save-post-btn {
     text-decoration: none;
     color: var(--senary-color);
     font-weight: lighter;
@@ -180,15 +180,30 @@ header h1, a, button {
     color: var(--senary-color);
 }
 
-.edit-link-btn:hover {
+.edit-link-btn:hover, .save-post-btn:hover, .go-back-button:hover {
     background-color: var(--secondary-color);
     text-decoration: none;
 }
 
 .delete-post-btn, 
-.edit-link-btn {
+.edit-link-btn,
+.save-post-btn {
     margin: 1% 20px;
 }
+
+/* EDIT and SAVE POST */
+.edit-save-post-form {
+    /* margin: 15px auto; */
+    margin: 2% 20%;
+    /* padding:11%; */
+   
+}
+
+.edit-post-form {
+    align-items: center;
+}
+
+
 
 /* TEXT AREA */
 textarea, input {
