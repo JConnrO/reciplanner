@@ -4,7 +4,7 @@ const { Recipe, User, Vote } = require('../models');
 const withAuth = require('../utils/auth');
 
 // get all recipes for homepage
-router.get('/', (req, res) => {
+router.get('/',withAuth, (req, res) => {
   console.log('======================');
   Recipe.findAll({
     attributes: [

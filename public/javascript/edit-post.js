@@ -3,8 +3,9 @@ async function editFormHandler(event) {
 
   const title = document.querySelector('input[name="recipe-title"]').value.trim();
   const description = document.querySelector('input[name="recipe-description"]').value;
-  const id = this.id;
-  
+  const id = window.location.toString().split('/')[
+    window.location.toString().split('/').length - 1
+  ];
   const response = await fetch(`/api/recipes/${id}`, {
     method: 'PUT',
     body: JSON.stringify({
