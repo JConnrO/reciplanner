@@ -25,4 +25,18 @@ async function newFormHandler(event) {
   }
 }
 
+//Delete function
+function deleteFormHandler(event) {
+  event.preventDefault();
+
+  const id = this.id
+  const response = fetch(`/api/recipes/${id}`, {
+    method: 'DELETE'
+  });
+
+  location.replace('/dashboard/');
+
+}
+
 document.querySelector('.new-post-form').addEventListener('submit', newFormHandler);
+document.querySelector('.delete-post-btn').addEventListener('click', deleteFormHandler);
