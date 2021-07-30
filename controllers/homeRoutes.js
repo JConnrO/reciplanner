@@ -1,9 +1,10 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Recipe, User, Vote } = require('../models');
+const withAuth = require('../utils/auth');
 
 // get all recipes for homepage
-router.get('/', (req, res) => {
+router.get('/',withAuth, (req, res) => {
   console.log('======================');
   Recipe.findAll({
     attributes: [
@@ -37,6 +38,7 @@ router.get('/', (req, res) => {
     });
 });
 
+// login route 
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');
@@ -46,6 +48,7 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+// route to display user recipes and create recipes
 router.get('/dashboard', (req, res) => {
   console.log('======================');
   Recipe.findAll({
@@ -65,9 +68,9 @@ router.get('/dashboard', (req, res) => {
     ]
   })
     .then(dbPostData => {
-      console.log(dbPostData)
+      
       const recipes = dbPostData.map(recipe => recipe.get({ plain: true }));
-
+console.log(dbPostData)
       res.render('dashboard', {
         recipes,
         loggedIn: req.session.loggedIn
@@ -78,118 +81,40 @@ router.get('/dashboard', (req, res) => {
       res.status(500).json(err);
     });
 });
+
+//route for edit post
+router.get('/edit/:id', withAuth, (req, res) => {
+  Recipe.findByPk(req.params.id, {
+    attributes: [
+      'id',
+      'youtube_url',
+      'title',
+      'description',
+      'created_at',
+      [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE recipe.id = vote.recipe_id)'), 'vote_count']
+    ],
+    include: [
+      {
+        model: User,
+        attributes: ['username']
+      }
+    ]
+  })
+    .then(dbPostData => {
+
+      if (dbPostData) {
+        const post = dbPostData.get({ plain: true });
+        
+        res.render('edit-post', {
+          post,
+          loggedIn: true
+        });
+      } else {
+        res.status(404).end();
+      }
+    })
+    .catch(err => {
+      res.status(500).json(err);
+    });
+});
 module.exports = router;
-// // get single post
-// router.get('/recipe/:id', (req, res) => {
-//   Recipe.findOne({
-//     where: {
-//       id: req.params.id
-//     },
-//     attributes: [
-//       'id',
-//       'youtube_url',
-//       'title',
-//       'description',
-//       'created_at',
-//       [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE recipe.id = vote.recipe_id)'), 'vote_count']
-//     ],
-//     include: [
-//       {
-//         model: User,
-//         attributes: ['username']
-//       }
-//     ]
-//   })
-//     .then(dbPostData => {
-//       if (!dbPostData) {
-//         res.status(404).json({ message: 'No post found with this id' });
-//         return;
-//       }
-
-//       const recipe = dbPostData.get({ plain: true });
-
-//       res.render('single-post', {
-//         recipe,
-//         loggedIn: req.session.loggedIn
-//       });
-//     })
-//     .catch(err => {
-//       console.log(err);
-//       res.status(500).json(err);
-//     });
-// });
-
-// router.get('/login', (req, res) => {
-//   if (req.session.loggedIn) {
-//     res.redirect('/');
-//     return;
-//   }
-
-//   res.render('login');
-// });
-
-// module.exports = router;
-
-// THE FOLLOWING ROUTES ARE FOR FRONTEND TESTING ONLY
-// Landing Page
-
-// DATA
-
-// Routes
-// =============================================================
-
-// router.get('/', (req, res) => {
-
-//     // Send all of the books to 'index.handlebars' as an object
-//     const posts = [
-//         {
-//           title: 'Best Chicken Penne',
-//           link: 'https://www.youtube.com/watch?v=Qc2aPjIJk-8',
-//           description: 'Super Tasty',
-//           upvote: 4000,
-//           username: 'ssss'
-//         },
-//         {
-//           title: 'Amazing Chicken Marsala',
-//           link: 'https://www.youtube.com/watch?v=AWNU1OccN5Q',
-//           description: 'Much wow',
-//           upvote: 2000,
-//           username: 'ssss'
-//         },
-//         {
-//           title: 'Super simple Sushi',
-//           link: "https://www.youtube.com/watch?v=joweUxpHaqc",
-//           description: 'No way!',
-//           upvote: 4,
-//           username: 'ssss'
-//         }
-//       ];
-
-//     const data = {
-//       cards: posts
-//     };
-//     res.render('landing', data);
-// });
-
-// //LOGIN dummy data SMM
-
-// router.get('/login', (req, res) => {
-//     const food = [
-//         {
-//           title: 'Love You Forever',
-//           read: false,
-//           author: 'Robert Munsch'
-//         },
-//         {
-//           title: 'The Giving Tree',
-//           read: false,
-//           author: 'Shel Silverstein'
-//         }
-//       ]
-
-//     const data = {
-//       library: food
-//     };
-//     res.render('login', data);
-// });
-
