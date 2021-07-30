@@ -37,39 +37,48 @@ Checkout: [ReciPlanner Slide Presentation](https://docs.google.com/presentation/
 
 ## Usage 
 
+### Landing Page:
+
 When the user first enters the website, they are presented with the landing page.
 
 
 ![Screenshot](public/assets/images/Landing-Page.png)
 
-
+### Login Page:
+ 
 Upon clicking login the user is brought to the login/create account page. Once the user creates an account they will be able to access their recipes.
 
 
 ![Screenshot](public/assets/images/Login-Page.png)
 
+### Create Post Page:
 
 On the recipe creation page, the user is presented with the 'Create New Post' card and their post dashboard, with options to delete or edit their posts.
 
 
 ![Screenshot](public/assets/images/Create-Post-Page.png)
 
+### Create Post Page (with input text):
 
 The user must enter in a title, youtube link, and a description to be able to post.
 
 
 ![Screenshot](public/assets/images/Create-Post-with-text.png)
 
-The user can also choose to delete or edit past created recipes. When the user clicks edit, they are brought to an edit card, which they are able to enter a new title and description. Once the save button is clicked, the user is brought back to the dashboard.
+### Edit Post Page:
 
+The user can also choose to delete or edit past created recipes. When the user clicks edit, they are brought to an edit card, which they are able to enter a new title and description. Once the save button is clicked, the user is brought back to the dashboard.
 
 ![Screenshot](public/assets/images/Edit-Post-Page.png)
 
+### My Recipes (with new post):
 
 The user can see the now created post in the dashboard.
 
 
 ![Screenshot](public/assets/images/Post-Creation.png)
+
+### Landing Page (with new post):
 
 When the user clicks the ReciPlanner logo, they are brought back to the landing page with the 'My Recipes' button in the navbar now showing, along with the user's newly created post.
 
