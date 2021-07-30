@@ -1,5 +1,5 @@
-// async function editFormHandler(event) {
-//   event.preventDefault();
+async function editFormHandler(event) {
+  event.preventDefault();
 
   const title = document.querySelector('input[name="recipe-title"]').value.trim();
   const description = document.querySelector('input[name="recipe-description"]').value;
@@ -17,11 +17,11 @@
     }
   });
 
-//   if (response.ok) {
-//     document.location.replace('/dashboard/');
-//   } else {
-//     alert(response.statusText);
-//   }
-// }
+  if (response.ok) {
+    document.location.replace('/dashboard/');
+  } else {
+    alert(response.statusText);
+  }
+}
 
-// document.querySelector('.edit-post-form').addEventListener('submit', editFormHandler);
+document.querySelector('.edit-post-form').addEventListener('submit', editFormHandler);
