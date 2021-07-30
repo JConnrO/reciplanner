@@ -107,8 +107,8 @@ Checkout: [ReciPlanner Slide Presentation](https://docs.google.com/presentation/
 
 When you first website you are presented with a simple layout:
 
-<!-- 
-![alt text](./assets/images/start.png "Quickly search for a stock!")
+
+![alt text](. "Quickly search for a stock!")
 
 
 Upon entering the stock ticker, you will be shown relevant stock information, as well as prior opening and closing prices of the stock in one-hour intervals:
@@ -154,7 +154,7 @@ As you build your stock watchlist, clicking on one of the saved stocks will disp
 Finally, at the bottom of our application, you will find a small section dedicated to the four developers of this application:computer:.
 
 
-![alt text](./assets/images/who.png "Click on our names and follow our work on GitHub!") -->
+![alt text](./assets/images/who.png "Click on our names and follow our work on GitHub!")
 
 
 ## Contributions
