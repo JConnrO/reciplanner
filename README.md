@@ -1,74 +1,6 @@
 # Reciplanner
 
-## Assignments:
-
-Front End: David and Stephen
-Back End: Maame, Connor and Steph
-
-## Meeting Calendar
-  - Mon   7/19: 7PM - 9PM:
-    - Project Idea
-  - Tues  7/20: 8PM - 10PM: 
-    - Project Structure -> MVP 
-  - Weds  7/21: 7PM - 9PM:
-    - Start Coding
-      - Front End: API
-      - Back End: API
-  - Thurs 7/22: 
-  - Fri   7/23: 
-  - Sat   7/24:
-  - Sun   7/25:
-  - Mon   7/26: 7PM - 9PM : 
-    - Powerpoint Presentation
-  - Tues  7/27: 
-  - Weds  7/28: 7PM - 9PM : PRESENTATION DUE
-  - Thurs 7/29: 
-  - Fri   7/30: 
-  - Sat   7/31:
-  - Sun   8/1: PROJECT DUE AT 11:59 PM
-
-
-## TO-DO
-### 1. MVP
-  1. User Storys (Github Issues)
-  2. MVC File  Structure
-  3. API
-      1. Define our data based on the APIs we find.
-      2. Get API's functioning properly
-  5. Wireframe
-  6. Link API with WireFrame
-  7. Cover Requirements Checklist
-### 2. Powerpoint Presentation
-### 3. List Additional Features
-   A. Export to food list
-   B. Add costs to items of food list
-   C. Extra
-      1. Meal Counter
-      2. Inventory
-      3. Calendar
-
-## Idea
- Food Recipe/Nutrition Sharing Meal Plan 
-   MVP: Export recipes to food list.
-   What is our data?
-      1. Recipe
-         a. Ingredients
-            1. Food
-            2. Amounts
-         b. Instructions
-            1. Cooking Time
-            2. Steps
-      2. User Data
-         a. Username
-         b. Recipes
-         c. Name
-         d. "Karma"
-         e. Meal Plans
-              1. Calendar?
-              2. Meal Count?
-         f. Weight
-
-<!-- ============== UNDER CONSTRUCTION: USING PAST PROJECT AS REFERENCE ============= -->
+This application is the second group project for the Rutgers Coding Bootcamp.
 
 ## Description 
 
@@ -105,61 +37,46 @@ Checkout: [ReciPlanner Slide Presentation](https://docs.google.com/presentation/
 
 ## Usage 
 
-When you first website you are presented with a simple layout:
+When the user first enters the website, they are presented with the landing page.
 
 
-![alt text](. "Quickly search for a stock!")
+![Screenshot](public/assets/images/Landing-Page.png)
 
 
-Upon entering the stock ticker, you will be shown relevant stock information, as well as prior opening and closing prices of the stock in one-hour intervals:
+Upon clicking login the user is brought to the login/create account page. Once the user creates an account they will be able to access their recipes.
 
 
-![alt text](./assets/images/stock.png "Snapshot of opening and closing prices of stock by the hour!")
+![Screenshot](public/assets/images/Login-Page.png)
 
 
-Hovering over a stock price will make the text pop out and allow for easier readability
+On the recipe creation page, the user is presented with the 'Create New Post' card and their post dashboard, with options to delete or edit their posts.
 
 
-![alt text](./assets/images/hover.png "Move your mouse cursor over the stock to make the text pop!")
+![Screenshot](public/assets/images/Create-Post-Page.png)
 
 
-By simply using the navigation bar on top of the website you can quickly jump to the news articles associate with the stock ticker you just looked up!
+The user must enter in a title, youtube link, and a description to be able to post.
 
 
-![alt text](./assets/images/nav.png "Quickly navigate through the website!")
+![Screenshot](public/assets/images/Create-Post-with-text.png)
+
+The user can also choose to delete or edit past created recipes. When the user clicks edit, they are brought to an edit card, which they are able to enter a new title and description. Once the save button is clicked, the user is brought back to the dashboard.
 
 
-Hovering over the news articles will dynamically change the container
+![Screenshot](public/assets/images/Edit-Post-Page.png)
 
 
-![alt text](./assets/images/news.png "Make the article stand out!")
+The user can see the now created post in the dashboard.
 
 
-Clicking on the article will open up the article in a separate tab for you to read more in depth about the stock!
+![Screenshot](public/assets/images/Post-Creation.png)
 
+When the user clicks the ReciPlanner logo, they are brought back to the landing page with the 'My Recipes' button in the navbar now showing, along with the user's newly created post.
 
-![alt text](./assets/images/preview.png "Get more in depth information before investing!")
-
-As you search for more and more stocks, a list of your recently searched stocks will be displayed for easy access!
-
-
-![alt text](./assets/images/save.png "Build a small watchlist of stocks!")
-
-
-As you build your stock watchlist, clicking on one of the saved stocks will display current stock information and news articles so you're always up to date!
-
-![alt text](./assets/images/load.png "A simple click brings all the stock information!")
-
-
-Finally, at the bottom of our application, you will find a small section dedicated to the four developers of this application:computer:.
-
-
-![alt text](./assets/images/who.png "Click on our names and follow our work on GitHub!")
+![Screenshot](public/assets/images/Landing-Page-with-new-post.png)
 
 
 ## Contributions
-
-![GitHub contributors](https://img.shields.io/github/contributors/Imaparadox/The-Brokers?style=for-the-badge)
 
 * [Stephen Marsh](https://github.com/Imaparadox)
 * [Maame Konadu Assasie Gyimah](https://github.com/maa-hub)
@@ -168,8 +85,8 @@ Finally, at the bottom of our application, you will find a small section dedicat
 * [Connor O'Brien](https://github.com/JConnrO)
 
 
-
 ## License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 MIT License
 
