@@ -68,9 +68,9 @@ router.get('/dashboard', (req, res) => {
     ]
   })
     .then(dbPostData => {
-      console.log(dbPostData)
+      
       const recipes = dbPostData.map(recipe => recipe.get({ plain: true }));
-
+console.log(dbPostData)
       res.render('dashboard', {
         recipes,
         loggedIn: req.session.loggedIn
@@ -101,6 +101,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
     ]
   })
     .then(dbPostData => {
+
       if (dbPostData) {
         const post = dbPostData.get({ plain: true });
         
