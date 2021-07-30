@@ -84,8 +84,11 @@ header h1, a, button {
 
 /* LOGIN */
 .login-signup-section {
-    margin: 2% auto;
+    margin: 2% 7.5%;
+    padding: 2.5%;
 }
+
+
 
 /* HERO styling if we want it */
 .hero-section {
@@ -208,7 +211,7 @@ header h1, a, button {
 
 
 /* TEXT AREA */
-textarea, input {
+/* textarea, input {
     padding: .5%;
     border-radius: 5px;
     border: 1px solid var(--senary-color);
@@ -222,7 +225,7 @@ textarea:focus, input:focus {
 textarea {
     min-width: 40%;
     min-height: 100px;
-}
+} */
 
 /* .description {
     min-width: 40%;
