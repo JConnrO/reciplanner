@@ -25,8 +25,9 @@
 {{#if recipes.length}}
 <section>
   <h2 class="post-title">Your Posts</h2>
+  {{#each recipes}}
   <ol>
-    {{#each recipes}}
+    
     <li>
       <article class="post container card mb-3">
         <div class="recipe-title-card container row">
@@ -39,8 +40,9 @@
         </div>
       </article>
     </li>
-    {{/each}}
-  </ol>
+   
+  </ol> 
+  {{/each}}
 </section>
 {{/if}}
 
