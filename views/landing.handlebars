@@ -15,8 +15,7 @@
 {{#each recipes}}
 <div class="user-recipes-container card mb-3 ">
   <div class="row g-0">
-    {{!-- WILL WORK ON UPVOTE FEATURE!! --}}
-    {{!-- <div class="col-md-auto p-md-4">
+    <div class="col-md-auto p-md-4">
       <button type="button" class="btn p-md-6 animate__animated animate__bounceIn" id="upvote" data-bs-toggle="button">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up"
           viewBox="0 0 16 16">
@@ -26,7 +25,7 @@
         </svg>
       </button>
       <p class="p-md-1 ">{{ vote_count}}</p>
-    </div> --}}
+    </div>
     <div class="col-md-4 p-md-4 animate__animated animate__pulse animate__delay-1s youtube-url">
       <iframe width="400" height="200" src={{format_url youtube_url }} frameborder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -35,13 +34,16 @@
       <div class="card-body">
         <h5 class="card-title post-title p-md-4">{{ title }}</h5>
         <p class="card-text description p-md-4">{{ description}}</p>
-        <p class="card-text"><small class="text-muted" id="{{this.id}}">{{format_date created_at }} by {{user.username}}</small></p>
+        <p class="card-text"><small class="text-muted">{{format_date created_at }} by {{user.username}}</small></p>
       </div>
     </div>
   </div>
 </div>
 {{/each}}
 
-{{!-- <script src="/javascript/upvote.js"></script> --}}
+{{!-- if user is logged in, allow user to upvote --}}
+{{!-- {{#if loggedIn}}
+<script src="/javascript/upvote.js"></script>
+{{/if}} --}}
 
-
+<script src="/javascript/upvote.js"></script>
