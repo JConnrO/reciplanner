@@ -3,7 +3,7 @@
 // async function upvoteClickHandler(event) {
   
 //     event.preventDefault();
-//   alert('working!');
+
 //     const id= req.body.id
 //     console.log(id)
 

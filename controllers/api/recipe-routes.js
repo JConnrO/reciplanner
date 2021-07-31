@@ -80,9 +80,9 @@ router.get('/', (req, res) => {
   });
 
   // PUT /api/posts/upvote
-router.put('/upvote',  (req, res) => {
+router.put('/upvote', withAuth, (req, res) => {
     // custom static method created in models/Post.js
-    Recipe.upvote({...req.body, user_id: user_id}, { Vote, User })
+    Recipe.upvote(req.body, { Vote })
       .then(updatedPostData => res.json(updatedPostData))
       .catch(err => {
         console.log(err);
