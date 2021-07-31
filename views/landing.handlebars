@@ -34,16 +34,13 @@
       <div class="card-body">
         <h5 class="card-title post-title p-md-4">{{ title }}</h5>
         <p class="card-text description p-md-4">{{ description}}</p>
-        <p class="card-text"><small class="text-muted">{{format_date created_at }} by {{user.username}}</small></p>
+        <p class="card-text"><small class="text-muted" id="{{this.id}}">{{format_date created_at }} by {{user.username}}</small></p>
       </div>
     </div>
   </div>
 </div>
 {{/each}}
 
-{{!-- if user is logged in, allow user to upvote --}}
-{{!-- {{#if loggedIn}}
 <script src="/javascript/upvote.js"></script>
-{{/if}} --}}
 
-<script src="/javascript/upvote.js"></script>
+
