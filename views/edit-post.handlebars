@@ -1,0 +1,22 @@
+<article class="edit-save-post-form">
+  <a href="/dashboard" class="go-back-button btn hide"> &larr; Back to dashboard</a>
+  <h2 class="edit-post-title">
+    Edit Post
+  </h2>
+  <form class="edit-post-form card row">
+    <div class="col-md-4">
+      <h3>Title:</h3>
+      <input name="recipe-title" type="text" value="{{title}}" />
+    </div>
+    <div class="col-md-4">
+      <h3>description:</h3>
+      <input name="recipe-description" type="text" value="{{recipe.description}}" />
+    </div>
+    <button type="submit" class="save-post-btn col-md-4">Save post</button>
+  </form>
+</article>
+
+
+
+<script src="/javascript/edit-post.js"></script>
+{{!-- <script src="/javascript/delete-post.js"></script> --}}

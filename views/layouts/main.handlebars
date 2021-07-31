@@ -1,10 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
-		<title>RECIPES PLACE HOLDER FOR TITLE</title>
-	</head>
-	<body>
-		{{{ body }}}
-	</body>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ReciPlanner</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class=" row">
+			<h1>
+				<a href="/" class="col-md-3"><i class="fas fa-utensils"></i>Reci<b>Planner</b></a>
+			</h1>
+			<nav class="navbar navbar-expand-lg row">
+				{{#if loggedIn}}
+				<a href="/dashboard" class="col-md-4 animate__animated animate__headShake"><i
+						class="fas fa-archive  "></i>My Recipes</a>
+				<button class="logout btn-no-style col-md-4 animate__animated animate__headShake"><i
+						class="fas fa-sign-out "></i>Logout</button>
+				{{else}}
+				<a href="/login" class="animate__animated col-md-4 animate__headShake"><i
+						class="fas fa-sign-in-alt"></i>Login</a>
+				{{/if}}
+			</nav>
+		</header>
+		<main>
+			{{{ body }}}
+		</main>
+		<footer>
+			{{!-- Will add footer similar to the Project 1 --}}
+			<div class="container">
+				<!-- About us -->
+				<div class="row">
+					<div class="col-md-6">
+						<h3>About:</h3>
+						<p>This webpage is a project for the Rutgers Coding Bootcamp. This application allows users to
+							post their own recipes, and the ability to vote for their favorite one.
+							Each
+							student did their part in making this webpage what it is today. If you like what you see,
+							feel
+							free to check out our personal GitHubs!</p>
+					</div>
+
+					<!-- Contact Us -->
+					<div class="col-md-6">
+						<h3>Contact Us:</h3>
+						<ul>
+							<li><a href="https://github.com/Imaparadox" target="_blank">Stephen Marsh</a></li>
+							<br>
+							<li><a href="https://github.com/maa-hub" target="_blank">Maame
+									Konadu Assasie Gyimah</a></li>
+							<br>
+							<li><a href="https://github.com/DiSantoz" target="_blank">David
+									Ferreira</a></li>
+							<br>
+							<li><a href="https://github.com/stephgeorge22" target="_blank">Stephanie George</a></li>
+							<br>
+							<li><a href="https://github.com/JConnrO" target="_blank">Connor O'Brien</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+		</footer>
+		<div class="container">
+			<div class="copyright">
+				ReciPlanner, Copyright &copy; 2021
+			</div>
+		</div>
+	</div>
+
+  <script src="/javascript/logout.js"></script>
+
+</body>
+
 </html>

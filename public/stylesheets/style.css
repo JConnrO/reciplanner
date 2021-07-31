@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root color scheme */
+:root {
+    --primary-color: #e6d3a3;
+    --secondary-color: #d8d174;
+    --tertiary-color: #f2f4f3;
+    --quaternary-color:  #b6c454;
+    --quinary-color: #91972a ;
+    --senary-color: #212121;
+}
+
+body, html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Baloo Chettan 2', cursive;
+    scroll-padding: 150px;
+}
+
+main {
+    min-height: calc(90vh - 285px);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    transition: color .1s;
+}
+
+a:hover {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+button {
+    background-color: var(--quaternary-color);
+    border: 0;
+    color: var(--senary-color);
+    padding: 1%;
+    transition: background-color .1s;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+html {
+    scroll-padding: 150px;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: var(--tertiary-color);
+}
+
+main {
+    min-height: calc(90vh - 285px);
+}
+
+header {
+    padding: 5px 10px;  
+    display: flex;
+    background-color: var(--quinary-color);
+    justify-content:space-between;
+    flex-wrap:wrap;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    border-bottom: 1px solid var(--senary-color);
+    font-size: 20px;
+}
+
+header h1, a, button {
+    text-shadow: 1px 1px var(--senary-color);
+}
+
+/* LOGIN */
+.login-signup-section {
+    margin: 2% 7.5%;
+    padding: 2.5%;
+}
+
+
+
+/* HERO styling if we want it */
+.hero-section {
+    background-image: url('../assets/images/istockphoto-1004108530-612x612\(Phone\ and\ food\).jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.hero-container {
+    width: 35%;
+    text-align: left;
+    margin: 3.5%;
+    color: var(--senary-color);
+    font-size: 18px;
+    line-height: 1.2;
+  }
+  
+.hero-container h2 {
+    font-size: 50px;
+    color: var(--senary-colorr);
+}
+
+/* LANDING page */
+.user-recipes-container {
+    margin: 1% 20px;
+    padding-right: 1%;
+}
+
+/* BUTTONS */
+.btn {
+    background-color: var(--quaternary-color);
+    color: var(--senary-color);
+}
+
+.btn-no-style {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 100%;
+    font-weight: bold;
+    transition: color .1s;
+    margin-left: 16px;
+}
+  
+.btn-no-style:hover {
+    background: none;
+    color: var(--secondary-color);
+}
+
+/* CREATE POST */
+.create-new-post {
+    margin: 2% 2%;
+}
+
+.post-title, .new-post-title, .edit-post-title {
+    display: flex;
+    justify-content: center;
+}
+
+.post {
+    margin: 15px auto;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.create-btn {
+    margin: 1% 20px;
+    padding-right: 2%;
+}
+
+/* EDIT and  DELETE POST */
+.recipe-title-card {
+    margin: 15px auto;
+    padding: 1.5%;
+}
+
+.recipe-title, .save-post-btn {
+    text-decoration: none;
+    color: var(--senary-color);
+    font-weight: lighter;
+    transition: none;
+    font-style: none;
+    text-shadow: none;
+    font-size: 25px;
+}
+
+.recipe-title:hover {
+    background: none;
+    color: var(--senary-color);
+}
+
+.edit-link-btn:hover, .save-post-btn:hover, .go-back-button:hover {
+    background-color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.delete-post-btn, 
+.edit-link-btn,
+.save-post-btn {
+    margin: 1% 20px;
+}
+
+/* EDIT and SAVE POST */
+.edit-save-post-form {
+    margin: 2% 20%;
+}
+
+.edit-post-form {
+    align-items: center;
+}
+
+
+
+/* TEXT AREA */
+/* textarea, input {
+    padding: .5%;
+    border-radius: 5px;
+    border: 1px solid var(--senary-color);
+}
+  
+textarea:focus, input:focus {
+    outline: none;
+    border: 1px solid var(--senary-color);
+}
+  
+textarea {
+    min-width: 40%;
+    min-height: 100px;
+} */
+
+/* .description {
+    min-width: 40%;
+    min-height: 150px;
+} */
+
+/* Styling for title, description, and user created postes on LANDING page */
+.post-title{
+    font-size: 30px;
+}
+
+.description{
+    font-size: 20px;
+}
+
+.text-muted{
+    font-size: 15px;
+}
+
+.hide {
+    text-shadow: none;
+}
+
+/* Styling for FORMS and FOOTER */
+form > div {
+    margin-bottom: 1%;
+}
+  
+form label {
+    display: block;
+}
+
+footer {
+    border-top: 1px solid var(--senary-color);
+    border-bottom: 1px solid var(--senary-color);
+    background-color: var(--quinary-color);
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    font-size: 110%;
+    margin-top: 10%;
+}
+.copyright {
+    display: flex;
+    justify-content: center;
+}
+
+/* Mobile Responsiveness */
+
+/* Large screens */
+@media screen and (max-width: 1415px){
+    
+}
+
+/* Tablets and smaller*/
+@media screen and (max-width: 768px) {
+    
+}
+
+/* Mobile Responsivness for Galaxy Fold Duo/ iPhone 5 and smaller */
+@media screen and (max-width: 325px) {
+    
+    
+}

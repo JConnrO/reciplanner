@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "seeds": "node seeds/index.js"
   },
   "repository": {
     "type": "git",
@@ -19,9 +20,14 @@
   },
   "homepage": "https://github.com/JConnrO/reciplanner#readme",
   "dependencies": {
+    "animate.css": "^4.1.1",
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.1",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.3.2",
+    "express-session": "^1.17.2",
+    "mysql2": "^2.2.5",
     "sequelize": "^6.6.5"
   }
 }

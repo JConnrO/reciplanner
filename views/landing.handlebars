@@ -1,0 +1,49 @@
+{{!-- Added hero for some FLARE --}}
+<section class="hero-section">
+  <div class="card hero-container">
+    <h2>About ReciPlanner</h2>
+    <p>
+      Have you ever wanted a place where you could find recipe ideas online, and be able to share your own ideas for
+      others to see all in the same location? Well, now you can with, ReciPlanner!!!
+      <br>
+      Say goodby to the extra hassle, and sign up to ReciPlanner to start meal prepping YOUR way, today!
+    </p>
+  </div>
+</section>
+
+{{!-- displays all recipes posts created by user--}}
+{{#each recipes}}
+<div class="user-recipes-container card mb-3 ">
+  <div class="row g-0">
+    <div class="col-md-auto p-md-4">
+      <button type="button" class="btn p-md-6 animate__animated animate__bounceIn" id="upvote" data-bs-toggle="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z">
+          </path>
+        </svg>
+      </button>
+      <p class="p-md-1 ">{{ vote_count}}</p>
+    </div>
+    <div class="col-md-4 p-md-4 animate__animated animate__pulse animate__delay-1s youtube-url">
+      <iframe width="400" height="200" src={{format_url youtube_url }} frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="col-md-4">
+      <div class="card-body">
+        <h5 class="card-title post-title p-md-4">{{ title }}</h5>
+        <p class="card-text description p-md-4">{{ description}}</p>
+        <p class="card-text"><small class="text-muted">{{format_date created_at }} by {{user.username}}</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+{{/each}}
+
+{{!-- if user is logged in, allow user to upvote --}}
+{{!-- {{#if loggedIn}}
+<script src="/javascript/upvote.js"></script>
+{{/if}} --}}
+
+<script src="/javascript/upvote.js"></script>
