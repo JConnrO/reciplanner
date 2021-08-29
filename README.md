@@ -11,7 +11,8 @@ What could be considered the new "Reddit" of recipes and meal plans, ReciPlanner
 Say goodby to the extra hassle, and sign up to ReciPlanner to start meal prepping YOUR way, today!  
 
 <!-- Make ACTIVE link -->
-Checkout: [ReciPlanner Website](https://JConnrO.github.io/reciplanner/)!
+Checkout: [ReciPlanner Website](https://reciplanner.herokuapp.com/)!
+
 
 Checkout: [ReciPlanner Slide Presentation](https://docs.google.com/presentation/d/1IMeTyBZ9tJeM5KL94rOKr2wSK1S-RewwTTerx4qfl6I/edit?usp=sharing)
 
